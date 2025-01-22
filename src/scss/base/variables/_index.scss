@@ -1,0 +1,28 @@
+@import 'typography';
+@import 'colors';
+
+$maxWidth: 1920;
+$minWidth: 320;
+
+:root {
+	--header-height: #{gem(82)};
+	--header-height-decrement: #{gem(-82)};
+	--section-padding: #{gem(70)};
+	--section-padding-decrement: #{gem(-70)};
+	--container-gap: 0.15rem;
+}
+
+@media all and (min-width: 1024px) {
+	:root {
+		--section-padding: #{gem(50)};
+		--section-padding-decrement: #{gem(-50)};
+	}
+}
+
+@media all and (min-width: 640px) {
+	:root {
+		--header-height: #{gem(86)};
+		--header-height-decrement: #{gem(-86)};
+		--container-gap: #{0.32rem};
+	}
+}

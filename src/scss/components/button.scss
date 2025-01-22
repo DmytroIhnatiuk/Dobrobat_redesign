@@ -1,0 +1,28 @@
+.btn {
+	svg {
+		transition:
+			transform 0.3s linear,
+			fill 0.3s linear;
+	}
+
+	@media all and (min-width: 1024px) {
+		&:hover {
+			svg {
+				fill: var(--black);
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+.fill_yellow {
+	svg {
+		fill: var(--black) !important;
+	}
+}
+.tab__button {
+	&.active {
+		pointer-events: none;
+		background: var(--black);
+		color: var(--white);
+	}
+}

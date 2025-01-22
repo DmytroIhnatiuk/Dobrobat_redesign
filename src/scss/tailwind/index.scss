@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.nav-link {
+		@apply lg:mr-40 lg:hover:text-yellow transition-colors last:mr-0 border-b-2 border-transparent border-solid lg:hover:border-yellow duration-300 font-medium;
+	}
+	.btn {
+		@apply relative rounded-30 flex justify-center items-center uppercase before:absolute before:-top-2 before:-right-2 before:-bottom-2 before:-left-2 before:rounded-30 before:bg-transparent transition-colors before:transition-colors duration-500 cursor-pointer font-bold;
+	}
+	.outline-black {
+		@apply border-2 border-black border-solid;
+	}
+	.outline-white {
+		@apply border-2 border-white border-solid text-white;
+	}
+	.fill_black {
+		@apply bg-black text-white lg:hover:bg-yellow lg:hover:text-black;
+	}
+	.fill_yellow {
+		@apply bg-yellow text-black lg:hover:bg-white;
+	}
+	.hover-black {
+		@apply lg:hover:text-white lg:hover:before:bg-black;
+	}
+	.hover-yellow {
+		@apply lg:hover:text-black lg:hover:before:bg-yellow;
+	}
+}

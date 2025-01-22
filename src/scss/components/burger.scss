@@ -1,0 +1,70 @@
+.burger {
+	span {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		transition: background 0.3s linear;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0.28rem;
+			height: 0.02rem;
+			border-radius: 1px;
+			background: var(--black);
+
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+	&.active {
+		svg {
+			stroke: transparent;
+		}
+		&::before {
+			background: transparent;
+		}
+		span {
+			z-index: 1;
+			&::before,
+			&::after {
+				background: var(--black);
+			}
+		}
+		@media all and (min-width: 1024px) {
+			&:hover {
+				&::before {
+					background: var(--black);
+				}
+				svg {
+					stroke: transparent;
+				}
+				span {
+					z-index: 1;
+					&::before,
+					&::after {
+						background: var(--white);
+					}
+				}
+			}
+		}
+	}
+	@media all and (min-width: 1024px) {
+		&:hover {
+			&::before {
+				background: var(--black);
+			}
+			svg {
+				stroke: var(--white);
+			}
+		}
+	}
+}
