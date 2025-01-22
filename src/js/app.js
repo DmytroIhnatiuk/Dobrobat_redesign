@@ -2,17 +2,17 @@ import HeaderComponent from './modules/HeaderComponent.js'
 import './libs/dynamic_adapt.js'
 import accordion from './modules/accordion.js'
 import * as flsFunctions from './core/functions.js'
-import { scrollToAnchor } from './modules/scrollToAnchor.js'
-import { headerFixed } from './modules/index.js'
+import {scrollToAnchor} from './modules/scrollToAnchor.js'
+import {headerFixed} from './modules/index.js'
 import burger from './modules/burger.js'
 import initMenus from './modules/menuCustom.js'
 import initTabsfrom from './modules/tabs.js'
 import {
-	aboutUsSliderNav,
-	aboutUsSlider,
-	newsSlider,
-	volunteersSlider,
-	ourТeamSlider, ourTeamSlider,
+    aboutUsSliderNav,
+    aboutUsSlider,
+    newsSlider,
+    volunteersSlider,
+    ourТeamSlider, ourTeamSlider,
 } from './modules/sliders.js'
 import Marquee from 'vanilla-marquee'
 import '../scss/tailwind/index.scss'
@@ -20,7 +20,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 import '../scss/style.scss'
-
 
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
@@ -41,41 +40,42 @@ flsFunctions.fullVHfix()
 // import './files/scroll/lazyload.js';
 
 window.addEventListener('DOMContentLoaded', () => {
-	try {
-		HeaderComponent()
-		scrollToAnchor()
-		headerFixed()
-		burger()
-		aboutUsSlider()
-		newsSlider()
-		volunteersSlider()
-		ourTeamSlider()
-		initTabsfrom()
-		initMenus()
-	} catch (e) {
-		console.log(e)
-	}
+    try {
+        document.querySelectorAll('.marquee').forEach(element => {
+            new Marquee(element, {
+                duplicated: true,
+                gap: 0,
+                speed: 100,
+            })
+        })
+        HeaderComponent()
+        scrollToAnchor()
+        headerFixed()
+        burger()
+        aboutUsSlider()
+        newsSlider()
+        volunteersSlider()
+        ourTeamSlider()
+        initTabsfrom()
+        initMenus()
+    } catch (e) {
+        console.log(e)
+    }
 })
 
 function updateViewBox() {
-	const svgElement = document.getElementById('logo')
-	const screenWidth = window.innerWidth
+    const svgElement = document.getElementById('logo')
+    const screenWidth = window.innerWidth
 
-	if (screenWidth >= 640) {
-		svgElement.setAttribute('viewBox', '0 0 18624.8 5000')
-	} else {
-		svgElement.setAttribute('viewBox', '0 0 5000 5000')
-	}
+    if (screenWidth >= 640) {
+        svgElement.setAttribute('viewBox', '0 0 18624.8 5000')
+    } else {
+        svgElement.setAttribute('viewBox', '0 0 5000 5000')
+    }
 }
 
 updateViewBox()
 
 window.addEventListener('resize', updateViewBox)
 
-document.querySelectorAll('.marquee').forEach(element => {
-	new Marquee(element, {
-		duplicated: true,
-		gap: 0,
-		speed: 100,
-	})
-})
+
