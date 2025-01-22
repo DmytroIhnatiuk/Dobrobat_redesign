@@ -51,8 +51,61 @@ function setHash(hash) {
     hash = hash ? `#${hash}` : location.href.split('#')[0];
     history.pushState('', '', hash);
 }
-
 function headerFixed() {
+    if (header) {
+        let lastScrollPosition = 0;
+        if (scrollY >= header.clientHeight) {
+            header.classList.add("fixed");
+        }
+        const throttle = (func, limit) => {
+            let lastFunc;
+            let lastRan;
+            return function () {
+                const context = this;
+                const args = arguments;
+                if (!lastRan) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                } else {
+                    clearTimeout(lastFunc);
+                    lastFunc = setTimeout(function () {
+                        if (Date.now() - lastRan >= limit) {
+                            func.apply(context, args);
+                            lastRan = Date.now();
+                        }
+                    }, limit - (Date.now() - lastRan));
+                }
+            };
+        };
+        const scrollHandler = throttle(() => {
+            let currentScrollPosition = scrollY || document.documentElement.scrollTop;
+
+            try {
+                if (!header.classList.contains('active')) {
+                    if (scrollY >= (header.clientHeight / 2.5)) {
+                        header.classList.add("fixed");
+                    } else {
+                        header.classList.remove("fixed");
+                    }
+                }
+
+                if (scrollY >= header.clientHeight + 60) {
+                    if (currentScrollPosition > lastScrollPosition) {
+                        header.classList.add("header-hidden");
+                    } else {
+                        header.classList.remove("header-hidden");
+                    }
+                    lastScrollPosition = currentScrollPosition;
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        }, 100);
+
+        window.addEventListener("scroll", scrollHandler);
+    }
+}
+function headerFixedold() {
     if (header) {
         let lastScrollPosition = 0;
         if (scrollY >= header.clientHeight) {

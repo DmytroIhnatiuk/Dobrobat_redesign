@@ -1,4 +1,5 @@
-import '../scss/style.scss'
+import HeaderComponent from './modules/HeaderComponent.js'
+import './libs/dynamic_adapt.js'
 import accordion from './modules/accordion.js'
 import * as flsFunctions from './core/functions.js'
 import { scrollToAnchor } from './modules/scrollToAnchor.js'
@@ -11,15 +12,16 @@ import {
 	aboutUsSlider,
 	newsSlider,
 	volunteersSlider,
-	ourТeamSlider,
+	ourТeamSlider, ourTeamSlider,
 } from './modules/sliders.js'
 import Marquee from 'vanilla-marquee'
+import '../scss/tailwind/index.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
+import '../scss/style.scss'
 
-import HeaderComponent from './modules/HeaderComponent.js'
-import './libs/dynamic_adapt.js'
+
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */
@@ -44,11 +46,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		scrollToAnchor()
 		headerFixed()
 		burger()
-		aboutUsSliderNav()
 		aboutUsSlider()
 		newsSlider()
 		volunteersSlider()
-		ourТeamSlider()
+		ourTeamSlider()
 		initTabsfrom()
 		initMenus()
 	} catch (e) {
