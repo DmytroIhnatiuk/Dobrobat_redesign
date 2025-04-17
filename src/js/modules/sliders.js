@@ -1,6 +1,6 @@
 import Swiper from 'swiper'
-import {Navigation, Thumbs} from 'swiper/modules'
-import {getElement} from '../core/index.js'
+import {Autoplay, Navigation, Thumbs} from 'swiper/modules'
+import {getElement, getElements} from '../core/index.js'
 
 
 function aboutUsSliderNav() {
@@ -104,23 +104,31 @@ function volunteersSlider() {
 
 function ourTeamSlider() {
     if (!getElement('[data-swiper="ourТeamSlider"]')) return
-    new Swiper('[data-swiper="ourТeamSlider"]', {
-        modules: [Navigation],
-        spaceBetween: 24,
-        slidesPerView: 1,
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
+    getElements('[data-swiper="ourТeamSlider"]').forEach(item => {
+
+        new Swiper(item, {
+            modules: [Navigation, Autoplay],
+            spaceBetween: 24,
+            slidesPerView: 1,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
             },
-            1024: {
-                slidesPerView: 4,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
             },
-        },
-        navigation: {
-            nextEl: '.ourТeamSlider-next',
-            prevEl: '.ourТeamSlider-prev',
-        },
+            navigation: {
+                nextEl: getElement('.ourТeamSlider-next', item),
+                prevEl: getElement('.ourТeamSlider-prev', item),
+            },
+        })
     })
+
 }
 
 export {

@@ -1,6 +1,5 @@
 import HeaderComponent from './modules/HeaderComponent.js'
 import './libs/dynamic_adapt.js'
-import accordion from './modules/accordion.js'
 import * as flsFunctions from './core/functions.js'
 import {scrollToAnchor} from './modules/scrollToAnchor.js'
 import {headerFixed} from './modules/index.js'
@@ -16,10 +15,11 @@ import {
 } from './modules/sliders.js'
 import Marquee from 'vanilla-marquee'
 import '../scss/tailwind/index.scss'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/thumbs'
-import '../scss/style.scss'
+// import 'swiper/css'
+// import 'swiper/css/navigation'
+// import 'swiper/css/thumbs'
+// import '../scss/style.scss'
+import {getElements} from "./core/index.js";
 
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
@@ -38,16 +38,23 @@ flsFunctions.fullVHfix()
 // Документація плагіна: https://github.com/verlok/vanilla-lazyload
 // Сніппет(HTML):
 // import './files/scroll/lazyload.js';
-
+getElements('.marquee').forEach(element => {
+    new Marquee(element, {
+        startVisible: true,
+        duplicated: true,
+        gap: 0,
+        speed: 100,
+    })
+})
 window.addEventListener('DOMContentLoaded', () => {
     try {
-        document.querySelectorAll('.marquee').forEach(element => {
-            new Marquee(element, {
-                duplicated: true,
-                gap: 0,
-                speed: 100,
-            })
-        })
+
+        // setTimeout(() => {
+        //     getElements('.marquee').forEach(element => {
+        //         element.classList.remove('hidden')
+        //     })
+        // }, 100)
+
         HeaderComponent()
         scrollToAnchor()
         headerFixed()
