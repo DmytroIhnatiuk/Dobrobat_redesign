@@ -76,7 +76,7 @@
 		"string-replace-loader": "latest",
 		"style-loader": "latest",
 		"swiper": "^11.1.15",
-		"tailwindcss": "latest",
+		"tailwindcss": "3.4.17",
 		"terser-webpack-plugin": "latest",
 		"tippy.js": "latest",
 		"transform-runtime": "0.0.0",
