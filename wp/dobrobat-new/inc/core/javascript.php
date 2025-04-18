@@ -2,11 +2,14 @@
 if (!function_exists('dobrobat_scripts_setup')) :
     function dobrobat_scripts_setup()
     {
-        $release_version = '1.0.5';
+        $release_version = '1.0.6';
         if (get_field('isNew_design', get_the_ID())):
             wp_enqueue_script('new-main-scripts', get_theme_file_uri('/assets/redesign/js/app.min.js'), array(), $release_version);
             if (is_front_page()):
                 wp_enqueue_script('home-scripts', get_theme_file_uri('/assets/redesign/js/home.min.js'), array(), $release_version);
+            endif;
+            if (is_page_template('page-team.php')):
+                wp_enqueue_script('team-scripts', get_theme_file_uri('/assets/redesign/js/team.min.js'), array(), $release_version);
             endif;
         else:
             if (is_page_template('page-renovation-borodianka.php')):

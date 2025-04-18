@@ -340,6 +340,9 @@ h5 {
   background: var(--black);
   color: var(--white)
 }
+[data-swiper=ourТeamSlider] .swiper-slide {
+  height: auto
+}
 .burger::after,
 .burger::before {
   cursor: pointer;

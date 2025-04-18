@@ -2,11 +2,11 @@
     <nav class="lg:mr-36">
         <ul class="hidden lg:flex">
             <li class="nav-link">
-                <a href="#about" class="scroll-to">Про нас</a>
+                <a href="#ambasadors" class="scroll-to"><?php pll_e('Амбасадори'); ?></a>
             </li>
-            <li class="nav-link"><a href="#projects" class="scroll-to">Наші проєкти</a></li>
-            <li class="nav-link"><a href="#news" class="scroll-to">Новини</a></li>
-            <li class="nav-link"><a href="#contacts" class="scroll-to">Контакти</a></li>
+            <li class="nav-link"><a href="#founders" class="scroll-to"><?php pll_e('Засновники'); ?></a></li>
+            <li class="nav-link"><a href="#media" class="scroll-to"><?php pll_e('Медіаамбасадори'); ?></a></li>
+            <li class="nav-link"><a href="#crew" class="scroll-to"><?php pll_e('Команда'); ?></a></li>
         </ul>
     </nav>
     <a href="https://telegram.me/dobrobat_in_ua_bot?start"
@@ -14,10 +14,10 @@
         data-da=".dynamic-btns,1024,1"
         class="btn outline-black text-s hover-black h-[.48rem] min-w-[1.6rem] mr-8"
     >
-        <span class="z-20"> приєднатись + </span>
+        <span class="z-20"> <?php pll_e('приєднатись'); ?> + </span>
     </a>
     <div class="btn fill_black h-[.48rem] w-[.95rem] mr-8">
-        <span class="z-20"> донат </span>
+        <span class="z-20"> <?php pll_e('донат'); ?> </span>
     </div>
     <div
         data-da=".dynamic-btns,1024,2"

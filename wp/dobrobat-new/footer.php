@@ -376,7 +376,7 @@ global $IS_NEW;
             відновлення / відбудова / реконструкція / відновлення / відбудова /
             реконструкція /
         </div>
-        <div class="container">
+        <div id="contacts" class="container">
             <a href="#" class="mb-36 sm:mb-40">
                 <svg class="h-[.6rem] sm:h-[.84rem] w-[2.3rem] sm:w-max">
                     <use
@@ -470,85 +470,72 @@ global $IS_NEW;
                                 <use href="#whatsapp-icon"></use>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="https://t.me/dobrobat_in_ua" target="_blank">
                             <svg
                                     class="size-40 fill-yellow lg:hover:fill-white transition-colors duration-300"
                             >
                                 <use href="#telegram-icon"></use>
                             </svg>
                         </a>
-                        <a
-                                href="#"
-                                class="size-40 bg-yellow lg:hover:bg-white transition-colors duration-300 rounded"
-                        >
-                            <svg class="size-full fill-black">
-                                <use href="#viber-icon"></use>
-                            </svg>
-                        </a>
+                        <?php if(1!==1): ?>
+                            <a
+                                    href="#"
+                                    class="size-40 bg-yellow lg:hover:bg-white transition-colors duration-300 rounded"
+                            >
+                                <svg class="size-full fill-black">
+                                    <use href="#viber-icon"></use>
+                                </svg>
+                            </a>
+                        <?php endif;?>
+
                     </div>
                 </div>
             </div>
             <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 gap-24">
                 <div class="lg:col-start-1 lg:col-end-6 lg:self-end">
                     <div class="flex text-s font-semibold uppercase gap-24 mb-12">
-                        <a
-                                class="hover:text-yellow transition-colors duration-300 underline underline-offset-8"
-                                href="#"
+                        <a target="_blank"
+                           class="hover:text-yellow transition-colors duration-300 underline underline-offset-8"
+                           href="https://www.facebook.com/dobrobat.in.ua"
                         >Facebook</a
                         >
-                        <a
-                                class="hover:text-yellow transition-colors duration-300 underline underline-offset-8"
-                                href="#"
+                        <a target="_blank"
+                           class="hover:text-yellow transition-colors duration-300 underline underline-offset-8"
+                           href="https://t.me/dobrobat_in_ua"
                         >telegram</a
                         >
                     </div>
-                    <a
-                            class="text-gray-500 hover:text-yellow transition-colors duration-300 underline underline-offset-8"
-                            href="#"
-                    >Політика конфіденційності, Відмова від відповідальності</a
-                    >
+                    <div class="flex">
+                        <a
+                                class="text-gray-500 mr-10 hover:text-yellow transition-colors duration-300 underline underline-offset-8"
+                                href="/privacy-policy/"
+                        >Політика конфіденційності</a
+                        > <a target="_blank"
+                             class="text-gray-500 hover:text-yellow transition-colors duration-300 underline underline-offset-8"
+                             href="/disclaimer/"
+                        >Відмова від відповідальності</a
+                        >
+                    </div>
+
                 </div>
                 <div
                         class="lg:col-start-6 lg:col-end-13 border border-white border-solid rounded-24 p-18"
                 >
                     <div class="text-l font-semibold mb-16">Партнери:</div>
                     <div class="flex flex-wrap gap-24 lg:gap-50">
-                        <a
-                                href="#"
+                        <a href="https://dsns.gov.ua/" target="_blank"
+
                                 class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
                         >
-                            <img class="size-full" src="@img/MVS.png" alt="logo_mvs"/>
+                            <img class="size-full" src="<?= dn_get_img_link('dsns.svg'); ?>" alt="<?php pll_e('Державна служба України з надзвичайних ситуацій'); ?>"/>
                         </a>
-                        <a
-                                href="#"
+                        <a href="https://prykhystok.gov.ua/" target="_blank"
+
                                 class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
                         >
-                            <img class="size-full" src="@img/SBU.png" alt="logo_sbu"/>
+                            <img class="size-full" src="<?= dn_get_img_link('pryhustok.svg'); ?>" alt="ПРИХИСТОК"/>
                         </a>
-                        <a
-                                href="#"
-                                class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
-                        >
-                            <img class="size-full" src="@img/PO.png" alt="logo_po"/>
-                        </a>
-                        <a
-                                href="#"
-                                class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
-                        >
-                            <img class="size-full" src="@img/KSDU.png" alt="logo_ksdu"/>
-                        </a>
-                        <a
-                                href="#"
-                                class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
-                        >
-                            <img class="size-full" src="@img/LASAR.png" alt="logo_lasar"/>
-                        </a>
-                        <a
-                                href="#"
-                                class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
-                        >
-                            <img class="size-full" src="@img/Shelter.png" alt="logo_shelter"/>
-                        </a>
+
                     </div>
                 </div>
             </div>

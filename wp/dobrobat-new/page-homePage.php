@@ -20,11 +20,11 @@ get_header();
                         Долучайся до відбудови нашої країни, зроби внесок у відродження
                         України
                     </div>
-                    <button
+                    <a href="https://telegram.me/dobrobat_in_ua_bot?start" target="_blank"
                             class="btn fill_yellow w-[1.9rem] h-[.48rem] mb-40 lg:mb-[.9rem]"
                     >
-                        <span class="mr-10">приєднатися</span> <span>+</span>
-                    </button>
+                        <span class="mr-10"><?php pll_e('приєднатися'); ?></span> <span>+</span>
+                    </a>
                     <div
                             class="grid grid-cols-[.78rem_1fr] lg:grid-cols-[1.38rem_1fr] gap-12 max-w-[7.6rem]"
                     >
@@ -93,7 +93,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <section class="mb-24 lg:mb-50">
+        <section id="about" class="mb-24 lg:mb-50">
             <div class="container">
                 <div class="rounded-24 overflow-hidden bg-white mb-24">
                     <div class="grid lg:grid-cols-2 gap-x-24 gap-y-20">
@@ -253,7 +253,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="mb-24 lg:mb-50 ">
+        <section id="projects" class="mb-24 lg:mb-50 ">
             <div class="container grid lg:grid-cols-2 gap-20 lg:gap-24">
                 <div
                         class="overflow-hidden lg:p-40 px-14 py-24 flex flex-col lg:justify-between rounded-24 bg-black text-white relative"
@@ -261,7 +261,7 @@ get_header();
                     <div
                             class="border border-white border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-50"
                     >
-                        Про нас
+                        Проєкти
                     </div>
                     <div>
                         <h2 class="font-bold mb-14 lg:mb-4">Наші проєкти</h2>
@@ -358,7 +358,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="mb-24 lg:mb-50">
+        <section id="news" class="mb-24 lg:mb-50">
             <div class="container">
                 <div
                         class="bg-white rounded-24 box__shadow px-12 py-16 sm:p-40 mb-16"
@@ -366,7 +366,7 @@ get_header();
                     <div
                             class="border border-black border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-16"
                     >
-                        Блог
+                        Новини
                     </div>
                     <div class="lg:flex justify-between items-center">
                         <h2 class="font-bold mb-16 lg:mb-0">Новини проєкту</h2>
@@ -475,14 +475,14 @@ get_header();
                     </div>
                     <div class="lg:flex justify-between items-center sm:mb-[.64rem]">
                         <h2 class="font-bold mb-16 lg:mb-0">Герої Добробату</h2>
-                        <button
+                        <a href="/heroes"
                                 class="absolute right-1/2 translate-x-1/2 bottom-24 lg:bottom-0 lg:relative btn fill_yellow w-[1.9rem] h-[.48rem] text-s lg:translate-x-0 lg:right-auto"
                         >
                             <span class="mr-8"> всі волонтери</span>
                             <svg class="size-16 fill-white">
                                 <use href="#btn-arrow-icon"></use>
                             </svg>
-                        </button>
+                        </a>
                     </div>
                     <div class="swiper" data-swiper="volunteersSlider">
                         <div class="swiper-wrapper">
@@ -516,7 +516,7 @@ get_header();
                                             </div>
                                         </div>
                                         <div class="flex flex-col justify-between">
-                                            <a href="#">
+                                            <a href="<?= get_permalink($heroesItem->ID) ?>">
                                                 <div
                                                         class="border border-white border-solid rounded-30 px-12 py-4 font-medium w-max mb-16 relative z-30 hover:border-yellow hover:text-yellow transition-colors duration-300"
                                                 >
@@ -578,7 +578,7 @@ get_header();
                     <div
                             class="border border-black border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-16"
                     >
-                        Блог
+                        Партнери
                     </div>
 
                     <h2 class="font-bold mb-[.9rem] lg:mb-[1.88rem]">
@@ -681,387 +681,8 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="mb-50 lg:mb-[1.1rem]">
-            <div class="container">
-                <div
-                        class="border border-black border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-16"
-                >
-                    Команда проєкту
-                </div>
 
-                <h2 class="mb-32 lg:mb-40 max-w-[10.48rem]">
-                    <span class="font-bold">Наша команда –</span> це об'єднання
-                    небайдужих людей, які вірять, що дім – це більше, ніж стіни
-                </h2>
-                <div class="tabs-container min-h-max">
-                    <div class="tabs-buttons flex mb-24 overflow-x-scroll h-max gap-16 md:gap-24">
-                        <button
-                                class="tab__button btn outline-black hover-black px-24 h-[.42rem] active flex-shrink-0"
-                                type="button"
-                        >
-                            <span class="z-10">амбасадори</span>
-                        </button>
-                        <button
-                                class="tab__button tab__button btn outline-black hover-black px-24 h-[.42rem] flex-shrink-0"
-                                type="button"
-                        >
-                            <span class="z-10">засновники</span>
-                        </button>
-                        <button
-                                class="tab__button tab__button tab__button btn outline-black hover-black px-24 h-[.42rem] flex-shrink-0"
-                                type="button"
-                        >
-                            <span class="z-10">медіаамбасадори</span>
-                        </button>
-                        <button
-                                class="tab__button tab__button tab__button btn outline-black hover-black px-24 h-[.42rem] flex-shrink-0"
-                                type="button"
-                        >
-                            <span class="z-10">команда проєкту</span>
-                        </button>
-                    </div>
-                    <div class="tabs-contents relative">
-                        <div class="tab__content active">
-                            <div class="content">
-                                <div class="swiper bg-bg" data-swiper="ourТeamSlider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide mb-24 sm:mb-32">
-                                            <div class="bg-white rounded-24 p-16 box__shadow">
-
-
-                                                <div
-                                                        class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                >
-                                                    <img
-                                                            class="object-cover"
-                                                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/founders/chern1.jpeg"
-                                                            alt="<?php pll_e("Олексій Чернишов "); ?>"
-                                                    />
-                                                </div>
-                                                <div class="text-l font-semibold mb-16">
-                                                    <?php pll_e("Олексій Чернишов "); ?>
-                                                </div>
-                                                <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                    <?php pll_e("СЕО Групи Нафтогаз"); ?>
-                                                </p>
-                                                <a href="https://www.facebook.com/NaftogazGroup"
-                                                   class="btn outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                >
-                                                    <span class="z-10"><?php pll_e('зв’язатись'); ?></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide mb-24 sm:mb-32">
-                                            <div class="bg-white rounded-24 p-16 box__shadow">
-                                                <div
-                                                        class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                >
-                                                    <img
-                                                            class="object-cover"
-                                                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/founders/kreidenko.jpg"
-                                                            alt="<?php pll_e("Володимир Крейденко"); ?>"
-                                                    />
-                                                </div>
-                                                <div class="text-l font-semibold mb-16">
-                                                    <?php pll_e("Володимир Крейденко"); ?>
-                                                </div>
-                                                <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                    <?php pll_e("Народний депутат України,
-                  заступник Голови Комітету ВРУ
-                  з питань транспорту та інфраструктури"); ?>
-                                                </p>
-                                                <a href="https://www.facebook.com/KreydenkoVolodymyr"
-                                                   class="btn outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                >
-                                                    <span class="z-10"><?php pll_e('зв’язатись'); ?></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide mb-24 sm:mb-32">
-                                            <div class="bg-white rounded-24 p-16 box__shadow">
-                                                <div
-                                                        class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                >
-                                                    <img
-                                                            class="object-cover"
-                                                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/founders/savchenko.jpg"
-                                                            alt="<?php pll_e("Владислав Савченко"); ?>"
-                                                    />
-                                                </div>
-                                                <div class="text-l font-semibold mb-16">
-                                                    <?php pll_e("Владислав Савченко"); ?>
-                                                </div>
-                                                <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                    <?php pll_e(" ІТ підприємець, продюсер фільму «Перший код», засновник  фонду «Благодійний фонд Владислава Савченка»"); ?>
-                                                </p>
-                                                <a href="https://www.facebook.com/savchenko.vladyslav"
-                                                   class="btn outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                >
-                                                    <span class="z-10"><?php pll_e('зв’язатись'); ?></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide mb-24 sm:mb-32">
-                                            <div class="bg-white rounded-24 p-16 box__shadow">
-                                                <div
-                                                        class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                >
-                                                    <img
-                                                            class="object-cover"
-                                                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/founders/akopan.jpg"
-                                                            alt="<?php pll_e("Мері Акопян"); ?>"
-                                                    />
-                                                </div>
-                                                <div class="text-l font-semibold mb-16">
-                                                    <?php pll_e("Мері Акопян"); ?>
-                                                </div>
-                                                <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                    <?php pll_e("Екс-заступниця Міністра внутрішніх справ"); ?></p>
-                                                <a href="https://www.facebook.com/mary.akopyan.96"
-                                                   class="btn outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                >
-                                                    <span class="z-10"><?php pll_e('зв’язатись'); ?></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide mb-24 sm:mb-32">
-                                            <div class="bg-white rounded-24 p-16 box__shadow">
-                                                <div
-                                                        class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                >
-                                                    <img
-                                                            class="object-cover"
-                                                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/founders/higginbotham.jpeg"
-                                                            alt="<?php pll_e("Ентоні Хіггінботам"); ?>"
-                                                    />
-                                                </div>
-                                                <div class="text-l font-semibold mb-16">
-                                                    <?php pll_e("Ентоні Хіггінботам"); ?>
-                                                </div>
-                                                <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                    <?php pll_e("член Парламенту Великої Британії"); ?></p>
-                                                <a href="https://www.facebook.com/antonyforburnley"
-                                                   class="btn outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                >
-                                                    <span class="z-10"><?php pll_e('зв’язатись'); ?></span>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div
-                                            class="flex items-center justify-between mx-auto z-30 w-max"
-                                    >
-                                        <button
-                                                class="ourТeamSlider-prev rounded-l-30 p-4 pl-8 border-y border-l border-black border-solid border-r-white border-r-0 lg:bg-white transition-colors duration-300 hover:bg-yellow hover:border-yellow"
-                                        >
-                                            <svg class="size-24 sm:size-32 fill-black">
-                                                <use href="#arrow-icon"></use>
-                                            </svg>
-                                        </button>
-                                        <button
-                                                class="ourТeamSlider-next rounded-r-30 p-4 pr-8 border-y border-r border-black border-solid border-l-white border-l-0 lg:bg-white transition-colors duration-300 hover:bg-yellow hover:border-yellow"
-                                        >
-                                            <svg class="size-24 sm:size-32 fill-black rotate-180">
-                                                <use href="#arrow-icon"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab__content bg-bg absolute top-0 right-0 left-0">
-                            <div class="content">
-                                <div class="swiper" data-swiper="ourТeamSlider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide mb-24 sm:mb-32">
-                                            <div class="bg-white rounded-24 p-16 box__shadow">
-                                                <div
-                                                        class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                >
-                                                    <img
-                                                            class="object-cover"
-                                                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/founders/smirnov.jpg"
-                                                            alt="<?php pll_e('Ростислав Смірнов'); ?>"
-                                                    />
-                                                </div>
-                                                <div class="text-l font-semibold mb-16">
-                                                    <?php pll_e('Ростислав Смірнов'); ?>
-                                                </div>
-                                                <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                    <?php pll_e('Громадський діяч'); ?>
-                                                </p>
-                                                <a href="https://www.facebook.com/rostislavsmirnov"
-                                                   class="btn outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                >
-                                                    <span class="z-10">зв’язатись</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide mb-24 sm:mb-32">
-                                            <div class="bg-white rounded-24 p-16 box__shadow">
-                                                <div
-                                                        class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                >
-                                                    <img
-                                                            class="object-cover"
-                                                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/founders/andrusiv.JPG"
-                                                            alt="Volodymyr"
-                                                    />
-                                                </div>
-                                                <div class="text-l font-semibold mb-16">
-                                                    <?php pll_e("Віктор Андрусів"); ?>
-                                                </div>
-                                                <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                    <?php pll_e("Військовослужбовець ЗСУ"); ?>
-                                                </p>
-                                                <a href="https://www.facebook.com/victor.andrusiv"
-                                                   class="btn outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                >
-                                                    <span class="z-10">зв’язатись</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                            class="flex items-center justify-between mx-auto z-30 w-max"
-                                    >
-                                        <button
-                                                class="ourТeamSlider-prev rounded-l-30 p-4 pl-8 border-y border-l border-black border-solid border-r-white border-r-0 lg:bg-white transition-colors duration-300 hover:bg-yellow hover:border-yellow"
-                                        >
-                                            <svg class="size-24 sm:size-32 fill-black">
-                                                <use href="#arrow-icon"></use>
-                                            </svg>
-                                        </button>
-                                        <button
-                                                class="ourТeamSlider-next rounded-r-30 p-4 pr-8 border-y border-r border-black border-solid border-l-white border-l-0 lg:bg-white transition-colors duration-300 hover:bg-yellow hover:border-yellow"
-                                        >
-                                            <svg class="size-24 sm:size-32 fill-black rotate-180">
-                                                <use href="#arrow-icon"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab__content bg-bg absolute top-0 right-0 left-0">
-                            <div class="content">
-                                <div class="swiper" data-swiper="ourТeamSlider">
-                                    <div class="swiper-wrapper">
-                                        <?php
-                                        foreach (get_field('blogers', 948) as $bloger) {
-                                            $name = get_locale() === 'en' ? $bloger['nameEn'] : $bloger['name'];
-                                            ?>
-                                            <div class="swiper-slide mb-24 sm:mb-32">
-                                                <div class="bg-white rounded-24 p-16 box__shadow">
-                                                    <div
-                                                            class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                    >
-                                                        <?= dn_get_image_attachment($bloger['photo'], 'dobrobat_celebrity', $name, 'object-cover') ?>
-                                                    </div>
-                                                    <div class="text-l font-semibold mb-16">
-                                                        <?= $name; ?>
-                                                    </div>
-                                                    <?php if (1 !== 1): ?>
-                                                        <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                            Народний депутат України, заступник Голови
-                                                            Комітету ВРУ з питань транспорту та інфраструктури
-                                                        </p>
-                                                    <?php endif; ?>
-
-                                                    <a href="<?= $bloger['instagram'] ?>"
-                                                       class="btn outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                    >
-                                                        <span class="z-10"><?php pll_e('зв’язатись'); ?></span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        <?php }
-                                        ?>
-
-
-                                    </div>
-                                    <div
-                                            class="flex items-center justify-between mx-auto z-30 w-max"
-                                    >
-                                        <button
-                                                class="ourТeamSlider-prev rounded-l-30 p-4 pl-8 border-y border-l border-black border-solid border-r-white border-r-0 lg:bg-white transition-colors duration-300 hover:bg-yellow hover:border-yellow"
-                                        >
-                                            <svg class="size-24 sm:size-32 fill-black">
-                                                <use href="#arrow-icon"></use>
-                                            </svg>
-                                        </button>
-                                        <button
-                                                class="ourТeamSlider-next rounded-r-30 p-4 pr-8 border-y border-r border-black border-solid border-l-white border-l-0 lg:bg-white transition-colors duration-300 hover:bg-yellow hover:border-yellow"
-                                        >
-                                            <svg class="size-24 sm:size-32 fill-black rotate-180">
-                                                <use href="#arrow-icon"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab__content bg-bg absolute top-0 right-0 left-0">
-                            <div class="content">
-                                <div class="swiper bg-bg" data-swiper="ourТeamSlider">
-                                    <div class="swiper-wrapper">
-
-                                        <?php
-                                        foreach (get_field('crew', 998) as $teamItem) {
-                                            $name = get_locale() === 'en' ? $teamItem['nameEn'] : $teamItem['name'];
-                                            $role = get_locale() === 'en' ? $teamItem['roleEn'] : $teamItem['role'];
-                                            ?>
-                                            <div class="swiper-slide mb-24 sm:mb-32">
-                                                <div class="bg-white h-auto rounded-24 p-16 box__shadow">
-                                                    <div
-                                                            class="image w-full h-[2.8rem] rounded-16 overflow-hidden mb-16"
-                                                    >
-                                                        <?= dn_get_image_attachment($teamItem['photo'], 'dobrobat_team', $name, 'object-cover') ?>
-                                                    </div>
-                                                    <div class="text-l font-semibold mb-16">
-                                                        <?= $name ?>
-                                                    </div>
-                                                    <p class="text-clamp text-clamp_3 text-s mb-16">
-                                                        <?= $role ?>
-                                                    </p>
-                                                    <a href="<?= $teamItem['instagram'] ?>"
-                                                            class="btn mt-auto outline-black hover-black w-[1.1rem] h-[.35rem] text-s"
-                                                    >
-                                                        <span class="z-10"><?php pll_e('зв’язатись'); ?></span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        <?php }
-
-                                        ?>
-                                    </div>
-                                    <div
-                                            class="flex items-center justify-between mx-auto z-30 w-max"
-                                    >
-                                        <button
-                                                class="ourТeamSlider-prev rounded-l-30 p-4 pl-8 border-y border-l border-black border-solid border-r-white border-r-0 lg:bg-white transition-colors duration-300 hover:bg-yellow hover:border-yellow"
-                                        >
-                                            <svg class="size-24 sm:size-32 fill-black">
-                                                <use href="#arrow-icon"></use>
-                                            </svg>
-                                        </button>
-                                        <button
-                                                class="ourТeamSlider-next rounded-r-30 p-4 pr-8 border-y border-r border-black border-solid border-l-white border-l-0 lg:bg-white transition-colors duration-300 hover:bg-yellow hover:border-yellow"
-                                        >
-                                            <svg class="size-24 sm:size-32 fill-black rotate-180">
-                                                <use href="#arrow-icon"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?=  get_template_part('template-parts/new/team'); ?>
     </main>
 <?php if (1 !== 1): ?>
     <main class="main__page">

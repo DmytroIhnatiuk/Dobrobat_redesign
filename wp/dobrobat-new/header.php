@@ -200,59 +200,19 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                 <div
                         class="h-[var(--header-height)] rounded-24 box__shadow px-8 sm:px-32 py-8 sm:py-18 bg-white flex items-center justify-between text-s min-w-full box__shadow"
                 >
-                    <a href="#">
+                    <a href="<?php echo get_home_url(); ?>">
                         <svg class="h-50 w-50 sm:w-[1.88rem]">
                             <use href="#logo"></use>
                         </svg>
                     </a>
-                    <div class="flex items-center">
-                        <nav class="lg:mr-36">
-                            <ul class="hidden lg:flex">
-                                <li class="nav-link">
-                                    <a href="#">Про нас</a>
-                                </li>
-                                <li class="nav-link"><a href="#">Наші проєкти</a></li>
-                                <li class="nav-link"><a href="#">Новини</a></li>
-                                <li class="nav-link"><a href="#">Закупівлі</a></li>
-                                <li class="nav-link"><a href="#">Контакти</a></li>
-                            </ul>
-                        </nav>
-                        <div
-                                data-da=".dynamic-btns,1024,1"
-                                class="btn outline-black text-s hover-black h-[.48rem] min-w-[1.6rem] mr-8"
-                        >
-                            <span class="z-20"> приєднатись + </span>
-                        </div>
-                        <div class="btn fill_black h-[.48rem] w-[.95rem] mr-8">
-                            <span class="z-20"> донат </span>
-                        </div>
-                        <div
-                                data-da=".dynamic-btns,1024,2"
-                                class="flex justify-center items-center text-m border-2 border-black border-solid rounded-30 uppercase font-bold h-[.48rem] w-[.9rem] language__switch lg:mr-8"
-                        >
-                            <div
-                                    class="hover:text-yellow transition-colors duration-300 cursor-pointer active"
-                            >
-                                UA
-                            </div>
-                            <span class="cursor-default">/</span>
-                            <div
-                                    class="hover:text-yellow transition-colors duration-300 cursor-pointer"
-                            >
-                                EN
-                            </div>
-                        </div>
-                        <button
-                                class="group burger relative rounded size-[.48rem] border-2 border-solid border-black flex justify-center items-center lg:hover:bg-black  lg:hover:text-yellow transition-colors duration-300"
-                        >
-                            <svg
-                                    class="size-32 lg:group-hover:stroke-white stroke-black z-10 transition-all duration-300"
-                            >
-                                <use href="#home-icon"></use>
-                            </svg>
-                            <span></span>
-                        </button>
-                    </div>
+                  <?php if(is_front_page()): ?>
+                  <?=  get_template_part('template-parts/new/main-page-header'); ?>
+
+                  <?php endif;?>
+                    <?php if(is_page_template('page-team.php')): ?>
+                        <?=  get_template_part('template-parts/new/team-header'); ?>
+
+                  <?php endif;?>
                 </div>
                 <div
                         class="menu absolute top-32 sm:top-[.6rem] right-[var(--container-gap)] left-[var(--container-gap)] lg:left-auto -z-10 overflow-hidden"
@@ -263,24 +223,27 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                         <ul
                                 class="sm:w-1/2 w-full sm:mr-24 menu-buttons flex-shrink-0 h-[4.5rem] sm:h-auto z-10"
                         >
-                            <li
-                                    class="mb-24 last:mb-0 menu-link trancition-colors active menu__button"
-                            >
-                                <a class="flex justify-between items-center" href="#">
-                                    <span class="mr-8">Про нас </span>
-                                    <span>
+                            <?php if(1!==1): ?>
+                                <li
+                                        class="mb-24 last:mb-0 menu-link transition-colors active menu__button"
+                                >
+                                    <a class="flex justify-between items-center" href="#">
+                                        <span class="mr-8">Про нас </span>
+                                        <span>
 								<svg class="size-16 fill-black">
 									<use href="#btn-arrow-icon"></use>
 								</svg>
 							</span>
-                                </a>
-                            </li>
-                            <li class="mb-24 last:mb-0 menu-link trancition-colors menu__button">
-                                <a class="flex justify-between items-center" href="#">
+                                    </a>
+                                </li>
+                            <?php endif;?>
+                     
+                            <li class="mb-24 last:mb-0 menu-link transition-colors menu__button">
+                                <a class="flex justify-between items-center" href="/projects/">
                                     <span class="mr-8">Проекти</span>
                                 </a>
                             </li>
-                            <li class="mb-24 last:mb-0 menu-link trancition-colors menu__button">
+                            <li class="mb-24 last:mb-0 menu-link transition-colors menu__button">
                                 <a class="flex justify-between items-center" href="#">
                                     <span class="mr-8">Потребують відновлення</span>
                                     <span>
@@ -290,9 +253,9 @@ if (is_page_template('page-reconstructionAcademy.php')) {
 							</span>
                                 </a>
                             </li>
-                            <li class="mb-24 last:mb-0 menu-link trancition-colors menu__button">
-                                <a class="flex justify-between items-center" href="#">
-                                    <span class="mr-8">Новини</span>
+                            <li class="mb-24 last:mb-0 menu-link transition-colors menu__button">
+                                <a class="flex justify-between items-center" href="/news/">
+                                    <span class="mr-8"><?php pll_e('Новини'); ?></span>
                                     <span>
 								<svg class="size-16 fill-black">
 									<use href="#btn-arrow-icon"></use>
@@ -301,7 +264,7 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                 </a>
                             </li>
 
-                            <li class="mb-24 last:mb-0 menu-link trancition-colors menu__button">
+                            <li class="mb-24 last:mb-0 menu-link transition-colors menu__button">
                                 <a class="flex justify-between items-center" href="#">
                                     <span class="mr-8">Зворотній зв'язок</span>
                                     <span>
@@ -320,7 +283,7 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                     class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
                             >
                                 <div
-                                        class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
+                                        class="pb-16 mb-24 border-b border-gray border-solid transition-colors active menu__content-close flex items-center sm:hidden"
                                 >
 							<span>
 								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
@@ -331,12 +294,12 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                 </div>
                                 <ul>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Команда проєкту</a>
                                     </li>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Волонтери</a>
                                     </li>
@@ -346,7 +309,7 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                     class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
                             >
                                 <div
-                                        class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
+                                        class="pb-16 mb-24 border-b border-gray border-solid transition-colors active menu__content-close flex items-center sm:hidden"
                                 >
 							<span>
 								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
@@ -360,7 +323,7 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                     class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
                             >
                                 <div
-                                        class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
+                                        class="pb-16 mb-24 border-b border-gray border-solid transition-colors active menu__content-close flex items-center sm:hidden"
                                 >
 							<span>
 								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
@@ -371,22 +334,22 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                 </div>
                                 <ul>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Команда проєкту</a>
                                     </li>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Волонтери</a>
                                     </li>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Команда проєкту</a>
                                     </li>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Волонтери</a>
                                     </li>
@@ -396,7 +359,7 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                     class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
                             >
                                 <div
-                                        class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
+                                        class="pb-16 mb-24 border-b border-gray border-solid transition-colors active menu__content-close flex items-center sm:hidden"
                                 >
 							<span>
 								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
@@ -407,12 +370,12 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                 </div>
                                 <ul>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Команда проєкту</a>
                                     </li>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Волонтери</a>
                                     </li>
@@ -422,7 +385,7 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                     class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
                             >
                                 <div
-                                        class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
+                                        class="pb-16 mb-24 border-b border-gray border-solid transition-colors active menu__content-close flex items-center sm:hidden"
                                 >
 							<span>
 								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
@@ -433,12 +396,12 @@ if (is_page_template('page-reconstructionAcademy.php')) {
                                 </div>
                                 <ul>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
-                                        <a href="#">Команда проєкту</a>
+                                        <a href="/team">Команда проєкту</a>
                                     </li>
                                     <li
-                                            class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
+                                            class="mb-16 last:mb-0 menu-link transition-colors menu__button"
                                     >
                                         <a href="#">Волонтери</a>
                                     </li>

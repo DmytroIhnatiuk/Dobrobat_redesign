@@ -1,24 +1,15 @@
-import HeaderComponent from './modules/HeaderComponent.js'
 import './libs/dynamic_adapt.js'
 import * as flsFunctions from './core/functions.js'
 import {scrollToAnchor} from './modules/scrollToAnchor.js'
 import {headerFixed} from './modules/index.js'
 import burger from './modules/burger.js'
-import initMenus from './modules/menuCustom.js'
-import initTabsfrom from './modules/tabs.js'
-import {
-    aboutUsSliderNav,
-    aboutUsSlider,
-    newsSlider,
-    volunteersSlider,
-    ourТeamSlider, ourTeamSlider,
-} from './modules/sliders.js'
+import initMenus from './modules/menuCustom.js';
 import Marquee from 'vanilla-marquee'
 import '../scss/tailwind/index.scss'
-// import 'swiper/css'
-// import 'swiper/css/navigation'
-// import 'swiper/css/thumbs'
-// import '../scss/style.scss'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/thumbs'
+import '../scss/style.scss'
 import {getElements} from "./core/index.js";
 
 
@@ -48,22 +39,9 @@ getElements('.marquee').forEach(element => {
 })
 window.addEventListener('DOMContentLoaded', () => {
     try {
-
-        // setTimeout(() => {
-        //     getElements('.marquee').forEach(element => {
-        //         element.classList.remove('hidden')
-        //     })
-        // }, 100)
-
-        HeaderComponent()
         scrollToAnchor()
         headerFixed()
         burger()
-        aboutUsSlider()
-        newsSlider()
-        volunteersSlider()
-        ourTeamSlider()
-        initTabsfrom()
         initMenus()
     } catch (e) {
         console.log(e)
