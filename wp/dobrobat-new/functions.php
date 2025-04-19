@@ -52,6 +52,7 @@ function dobrobat_setup()
     register_nav_menus(
         array(
             'menu' => esc_html__('Primary', 'dobrobat'),
+            'menu-footer' => esc_html__('Меню Footer', 'dobrobat'),
         )
     );
 

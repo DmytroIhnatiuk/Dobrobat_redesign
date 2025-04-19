@@ -2,7 +2,7 @@ import { getElement, getElements } from '../core/index.js'
 import { removeActive } from '../core/classesEvents.js'
 
 export default function initMenus() {
-	if (!getElement('.menu-container')) return
+	if (!getElement('.menu-container') && window.innerWidth > 992) return
 
 	getElements('.menu-container').forEach(menuItem => {
 		const menuButtons = Array.from(getElements('.menu__button', menuItem))

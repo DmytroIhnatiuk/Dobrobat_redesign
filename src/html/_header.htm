@@ -11,7 +11,7 @@
                 </svg>
             </a>
             <div class="flex items-center">
-                <nav class="lg:mr-36">
+                <nav class="lg:mr-36 nav-menu">
                     <ul class="hidden lg:flex">
                         <li class="nav-link">
                             <a href="#">Про нас</a>
@@ -66,190 +66,51 @@
                     class="lg:w-[7.5rem] w-full sm:h-auto rounded-b-24 overflow-hidden bg-bg px-32 sm:px-[.74rem] pb-24 pt-[.9rem] sm:py-[.9rem] sm:flex text-l menu-container relative"
             >
                 <ul
-                        class="sm:w-1/2 w-full sm:mr-24 menu-buttons flex-shrink-0 h-[4.5rem] sm:h-auto z-10"
+                        class="sm:w-1/2 w-full sm:mr-24   menu-buttons flex-shrink-0 h-[4.5rem] sm:h-auto z-10"
                 >
-                    <li data-nav-item="0"
-                            class="mb-24 last:mb-0 menu-link trancition-colors active menu__button"
+                    <li
+                        class="mb-24 last:mb-0   transition-colors   "
                     >
-                        <a class="flex justify-between items-center" href="#">
-                            <span class="mr-8">Про нас </span>
-                            <span>
-								<svg class="size-16 fill-black">
-									<use href="#btn-arrow-icon"></use>
-								</svg>
-							</span>
+                        <a class=" w-auto menu-link  " href="#">
+                            Про нас
                         </a>
                     </li>
-                    <li data-nav-item="1" class="mb-24 last:mb-0 menu-link trancition-colors menu__button">
-                        <a class="flex justify-between items-center" href="#">
+                    <li data-nav-item="1" class="mb-24 last:mb-0  submenu transition-colors ">
+                        <div class="flex justify-between menu-link items-center menu__button" href="#">
                             <span class="mr-8">Проекти</span>
-                        </a>
-                    </li>
-                    <li class="mb-24 last:mb-0 menu-link trancition-colors menu__button">
-                        <a class="flex justify-between items-center" href="#">
-                            <span class="mr-8">Потребують відновлення</span>
-                            <span>
+                            <span class="">
 								<svg class="size-16 fill-black">
 									<use href="#btn-arrow-icon"></use>
 								</svg>
 							</span>
-                        </a>
-                    </li>
-                    <li class="mb-24 last:mb-0 menu-link trancition-colors menu__button">
-                        <a class="flex justify-between items-center" href="#">
-                            <span class="mr-8">Новини</span>
-                            <span>
-								<svg class="size-16 fill-black">
+                        </div>
+                        <div
+                                class="menu__content pl-32 pr-32  sm:pl-[.7rem] absolute top-[.9rem] ring-0 right-0 h-full w-full lg:w-1/2"
+                        >
+                            <div  class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden">
+							<span>
+								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
 									<use href="#btn-arrow-icon"></use>
 								</svg>
 							</span>
-                        </a>
-                    </li>
-
-                    <li class="mb-24 last:mb-0 menu-link trancition-colors menu__button">
-                        <a class="flex justify-between items-center" href="#">
-                            <span class="mr-8">Зворотній зв'язок</span>
-                            <span>
-								<svg class="size-16 fill-black">
-									<use href="#btn-arrow-icon"></use>
-								</svg>
-							</span>
-                        </a>
+                                <span>Про нас </span>
+                            </div>
+                            <ul>
+                                <li
+                                        class="mb-16 last:mb-0 menu-link trancition-colors "
+                                >
+                                    <a href="#">Команда проєкту</a>
+                                </li>
+                                <li
+                                        class="mb-16 last:mb-0 menu-link trancition-colors "
+                                >
+                                    <a href="#">Волонтери</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
                 <!-- start -->
-                <div
-                        class="menu-contents sm:border-l border-solid border-gray text-m sm:relative absolute top-0 ring-0 left-0 sm:w-1/2 w-full h-5/6 sm:h-auto"
-                >
-                    <div data-nav-target="0"
-                            class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
-                    >
-                        <div
-                                class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
-                        >
-							<span>
-								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
-									<use href="#btn-arrow-icon"></use>
-								</svg>
-							</span>
-                            <span class="mr-8">Про нас </span>
-                        </div>
-                        <ul>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Команда проєкту</a>
-                            </li>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Волонтери</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div data-nav-target="1"
-                            class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
-                    >
-                        <div
-                                class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
-                        >
-							<span>
-								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
-									<use href="#btn-arrow-icon"></use>
-								</svg>
-							</span>
-                            <span class="mr-8">Проекти </span>
-                        </div>
-                    </div>
-                    <div
-                            class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
-                    >
-                        <div
-                                class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
-                        >
-							<span>
-								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
-									<use href="#btn-arrow-icon"></use>
-								</svg>
-							</span>
-                            <span class="mr-8">Потребують відновлення </span>
-                        </div>
-                        <ul>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Команда проєкту</a>
-                            </li>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Волонтери</a>
-                            </li>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Команда проєкту</a>
-                            </li>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Волонтери</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div
-                            class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
-                    >
-                        <div
-                                class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
-                        >
-							<span>
-								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
-									<use href="#btn-arrow-icon"></use>
-								</svg>
-							</span>
-                            <span class="mr-8">Новини </span>
-                        </div>
-                        <ul>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Команда проєкту</a>
-                            </li>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Волонтери</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div
-                            class="menu__content pl-32 pr-32 pt-[.9rem] sm:pt-0 sm:pl-[.7rem] absolute top-0 ring-0 left-0 h-full w-full"
-                    >
-                        <div
-                                class="pb-16 mb-24 border-b border-gray border-solid trancition-colors active menu__content-close flex items-center sm:hidden"
-                        >
-							<span>
-								<svg class="size-16 fill-black !rotate-[225deg] mr-24">
-									<use href="#btn-arrow-icon"></use>
-								</svg>
-							</span>
-                            <span class="mr-8">Зворотній зв'язок </span>
-                        </div>
-                        <ul>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Команда проєкту</a>
-                            </li>
-                            <li
-                                    class="mb-16 last:mb-0 menu-link trancition-colors menu__button"
-                            >
-                                <a href="#">Волонтери</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
                 <div
                         class="dynamic-btns flex w-max sm:absolute bottom-16 right-32 ml-auto lg:hidden"
                 ></div>
