@@ -6,12 +6,11 @@ import burger from './modules/burger.js'
 import initMenus from './modules/menuCustom.js';
 import Marquee from 'vanilla-marquee'
 import '../scss/tailwind/index.scss'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/thumbs'
-import '../scss/style.scss'
+// import 'swiper/css'
+// import 'swiper/css/navigation'
+// import 'swiper/css/thumbs'
+// import '../scss/style.scss'
 import {getElements} from "./core/index.js";
-
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */

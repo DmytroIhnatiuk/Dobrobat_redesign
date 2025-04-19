@@ -1,4 +1,4 @@
-import {aboutUsSlider, newsSlider, ourTeamSlider, volunteersSlider} from "../modules/sliders.js";
+import {aboutUsSlider, newsSlider, ourTeamSlider, partnersSlider, volunteersSlider} from "../modules/sliders.js";
 import initTabs from "../modules/tabs.js";
 
 
@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
         volunteersSlider()
         ourTeamSlider()
         initTabs()
+        partnersSlider()
     } catch (e) {
         console.log(e)
     }

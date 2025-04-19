@@ -38,14 +38,25 @@ const config = {
 	optimization: {
 		minimize: false
 	},
-	entry: [
-		`${paths.src}/js/app.js`
-	],
+	entry: {
+		app: `${paths.src}/js/app.js`,
+		team: `${paths.src}/js/pages/team.js`,
+		home: `${paths.src}/js/pages/home.js`,
+	},
+
 	output: {
 		path: `${paths.build}`,
-		filename: 'js/app.min.js',
-		publicPath: '/'
+		filename: 'js/[name].min.js',
+		publicPath: '/',
 	},
+	// entry: [
+	// 	`${paths.src}/js/app.js`
+	// ],
+	// output: {
+	// 	path: `${paths.build}`,
+	// 	filename: 'js/app.min.js',
+	// 	publicPath: '/'
+	// },
 	devServer: {
 		historyApiFallback: true,
 		static: paths.build,
@@ -56,9 +67,9 @@ const config = {
 		host: 'local-ip', // localhost
 		//В режимі розробника папка 
 		// результатом (dist) буде створюватися на диску)
-		//devMiddleware: {
-		//	writeToDisk: true,
-		//},
+		// devMiddleware: {
+		// 	writeToDisk: true,
+		// },
 		watchFiles: [
 			`${paths.src}/**/*.html`,
 			`${paths.src}/**/*.pug`,

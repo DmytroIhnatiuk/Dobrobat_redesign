@@ -63,12 +63,7 @@ const config = {
 	entry: {
 		app: `${paths.src}/js/app.js`,
 		team: `${paths.src}/js/pages/team.js`,
-		// catalog: `${paths.src}/js/pages/catalog.js`,
-		// product: `${paths.src}/js/pages/product.js`,
-		// cart: `${paths.src}/js/pages/cart.js`,
-		// user: `${paths.src}/js/pages/user.js`,
 		home: `${paths.src}/js/pages/home.js`,
-		// checkout: `${paths.src}/js/pages/checkout.js`,
 	},
 
 	output: {

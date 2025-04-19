@@ -21,7 +21,7 @@ get_header();
                         України
                     </div>
                     <a href="https://telegram.me/dobrobat_in_ua_bot?start" target="_blank"
-                            class="btn fill_yellow w-[1.9rem] h-[.48rem] mb-40 lg:mb-[.9rem]"
+                       class="btn fill_yellow w-[1.9rem] h-[.48rem] mb-40 lg:mb-[.9rem]"
                     >
                         <span class="mr-10"><?php pll_e('приєднатися'); ?></span> <span>+</span>
                     </a>
@@ -476,7 +476,7 @@ get_header();
                     <div class="lg:flex justify-between items-center sm:mb-[.64rem]">
                         <h2 class="font-bold mb-16 lg:mb-0">Герої Добробату</h2>
                         <a href="/heroes"
-                                class="absolute right-1/2 translate-x-1/2 bottom-24 lg:bottom-0 lg:relative btn fill_yellow w-[1.9rem] h-[.48rem] text-s lg:translate-x-0 lg:right-auto"
+                           class="absolute right-1/2 translate-x-1/2 bottom-24 lg:bottom-0 lg:relative btn fill_yellow w-[1.9rem] h-[.48rem] text-s lg:translate-x-0 lg:right-auto"
                         >
                             <span class="mr-8"> всі волонтери</span>
                             <svg class="size-16 fill-white">
@@ -570,119 +570,8 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="mb-24 lg:mb-50">
-            <div class="container">
-                <div
-                        class="bg-white rounded-24 box__shadow px-12 sm:px-40 p-24 sm:pb-[.74rem]"
-                >
-                    <div
-                            class="border border-black border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-16"
-                    >
-                        Партнери
-                    </div>
-
-                    <h2 class="font-bold mb-[.9rem] lg:mb-[1.88rem]">
-                        Партнери проєкту
-                    </h2>
-                    <div
-                            class="flex justify-center flex-wrap gap-24 sm:gap-y-[.52rem] sm:gap-x-32"
-                    >
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/Dnipro-M_logo.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/hilti_logo.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/run.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/room.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/run.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/Dnipro-M_logo.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/hilti_logo.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/run.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/room.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="imagev h-[.28rem] sm:h-[.46rem] w-max">
-                                <img
-                                        class="size-full grayscale lg:hover:grayscale-0 transition-[filter] duration-300"
-                                        src="@img/run.png"
-                                        alt="partner"
-                                />
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <?=  get_template_part('template-parts/new/team'); ?>
+        <?= get_template_part('template-parts/new/partners'); ?>
+        <?= get_template_part('template-parts/new/team'); ?>
     </main>
 <?php if (1 !== 1): ?>
     <main class="main__page">
@@ -826,32 +715,7 @@ get_header();
     <?php
     if (pll_current_language() == 'ua') : ?>
 
-        <!--    <section class="section section__aid py-40">-->
-        <!--        <div class="container">-->
-        <!--            <div class="aid  d-flex">-->
-        <!--                <h2 class="fz-52">-->
-        <!--                    --><?php //pll_e('Стрічка взаємодопомоги'); ?>
-        <!---->
-        <!--                </h2>-->
-        <!--                <div class="aid__descr">-->
-        <!--                    <p class="fz-18">-->
-        <!--                        --><?php //pll_e('Щоб прискорити роботу відбудови, ми створили живу стрічку взаємодопомоги. Де ті хто постраждав, можуть
-//            вказати інформацію про пошкодження, та що саме треба полагодити.'); ?><!--</p>-->
-        <!--                    <p class="fz-18">--><?php //pll_e('А ті хто може швидко допомогти, самоорганізуватись, зв’язатись з користувачем, якому
-//            потрібна допомога, та прибути на відновлювальні роботи.'); ?><!--</p>-->
-        <!--                    <div class="aid__btns d-flex">-->
-        <!--                        <a href="#form" class="btn btn_ac scrolTo"><span class="fz-18" data-askHelp>-->
-        <!--                --><?php //pll_e('РОЗМІСТИТИ ОГОЛОШЕННЯ'); ?>
-        <!--              </span></a>-->
-        <!--                        <a href="/advertisement/" class="btn "><span class="fz-18">-->
-        <!--                --><?php //pll_e('УСІ ОГОЛОШЕННЯ'); ?>
-        <!---->
-        <!--              </span></a>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--    </section>-->
+
         <section class="section section__aid py-40">
             <div class="container">
                 <div class="aid  d-flex">

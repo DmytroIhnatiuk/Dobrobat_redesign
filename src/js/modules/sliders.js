@@ -136,7 +136,7 @@ function partnersSlider() {
 			spaceBetween: 32,
 			slidesPerView: 2,
 			loop: true,
-			speed: 5000,
+			speed: 3500,
 			breakpoints: {
 				1024: {
 					slidesPerView: 5,
@@ -146,8 +146,10 @@ function partnersSlider() {
 				delay: 0,
 				disableOnInteraction: false,
 			},
-			freeMode: true, // включає режим без “щаблів” — плавна прокрутка
+			freeMode: true,
 			freeModeMomentum: false,
+			freeModeSticky: false,
+			grabCursor: false,
 		})
 	})
 }
