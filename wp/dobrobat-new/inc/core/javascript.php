@@ -2,7 +2,7 @@
 if (!function_exists('dobrobat_scripts_setup')) :
     function dobrobat_scripts_setup()
     {
-        $release_version = '1.0.6';
+        $release_version = '1.0.8';
         if (get_field('isNew_design', get_the_ID())):
             wp_enqueue_script('new-main-scripts', get_theme_file_uri('/assets/redesign/js/app.min.js'), array(), $release_version);
             if (is_front_page()):

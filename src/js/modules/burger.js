@@ -3,9 +3,10 @@ import {disableScroll, disableScrollAndSwipes, enableScroll, enableScrollAndSwip
 
 const burger = () => {
     if (header) {
-        const burger = header.querySelector('.burger')
-        const menu = document.querySelector('.menu') // Изменено на тег header
+        const burger = header.querySelector('.burger');
+        const menu = document.querySelector('.menu');
         const body = document.body
+        const nav = header.querySelector('.nav-menu');
 
         if (burger && menu && body) {
             burger.addEventListener('click', () => {
@@ -15,12 +16,20 @@ const burger = () => {
                         burger.classList.remove('active')
                         menu.classList.remove('active')
                         body.classList.remove('active')
+                        if (nav){
+                            nav.classList.remove('pointer-events-none')
+                            nav.classList.remove('opacity-50')
+                        }
                     }, 100)
                 } else {
                     disableScroll();
                     burger.classList.add('active')
                     menu.classList.add('active')
                     body.classList.add('active')
+                    if (nav){
+                        nav.classList.add('pointer-events-none')
+                        nav.classList.add('opacity-50')
+                    }
                 }
             })
         } else {

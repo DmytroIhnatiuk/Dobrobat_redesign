@@ -66,7 +66,6 @@ body {
   position: relative;
   color: var(--black);
   background-color: var(--bg);
-  font-family: Inter,sans-serif;
   height: 100vh;
   width: 100%;
   -ms-scroll-chaining: none;
@@ -395,6 +394,47 @@ h5 {
   }
   .menu.active {
     max-height: 4rem
+  }
+}
+@media all and (min-width:993px) {
+  .menu .submenu .menu__button {
+    cursor: pointer
+  }
+  .menu .submenu::after {
+    cursor: default;
+    height: calc(100% - .9rem);
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    content: "";
+    position: absolute
+  }
+  .menu .submenu::after:hover {
+    cursor: pointer
+  }
+  .menu .submenu .menu__content {
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden
+  }
+  .menu .submenu .menu__content:hover {
+    opacity: 1;
+    visibility: visible
+  }
+  .menu .submenu:hover .menu__button {
+    color: var(--yellow)
+  }
+  .menu .submenu:hover .menu__button svg {
+    fill: var(--yellow);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  .menu .submenu:hover:after {
+    width: 50%
+  }
+  .menu .submenu:hover .menu__content {
+    opacity: 1;
+    visibility: visible
   }
 }
 @media all and (min-width:1024px) {

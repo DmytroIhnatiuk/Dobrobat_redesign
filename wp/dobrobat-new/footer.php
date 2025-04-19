@@ -377,7 +377,7 @@ global $IS_NEW;
             реконструкція /
         </div>
         <div id="contacts" class="container">
-            <a href="#" class="mb-36 sm:mb-40">
+            <a href="<?php echo get_home_url(); ?>" class="mb-36 sm:mb-40">
                 <svg class="h-[.6rem] sm:h-[.84rem] w-[2.3rem] sm:w-max">
                     <use
                             href="#logo-footer
@@ -392,65 +392,17 @@ global $IS_NEW;
                         Вступайте до рядів Добробату або допомагайте по своїм можливостям, тут
                         кожен матиме, що робити!
                     </div>
-                    <button class="btn fill_yellow w-[3.26rem] h-[.48rem]">
+                    <a href="https://t.me/dobrobat_in_ua" target="_blank" class="btn fill_yellow w-[3.26rem] h-[.48rem]">
                         <span>приєднатися +</span>
-                    </button>
+                    </a>
                 </div>
                 <div class="lg:col-start-6 lg:col-end-10 grid grid-cols-2 gap-20">
-                    <ul>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Про нас</a>
-                        </li>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Наші проекти</a>
-                        </li>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Новини</a>
-                        </li>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Закупівлі</a>
-                        </li>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Контакти</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Про нас</a>
-                        </li>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Наші проекти</a>
-                        </li>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Новини</a>
-                        </li>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Закупівлі</a>
-                        </li>
-                        <li
-                                class="mb-24 last:mb-0 hover:text-yellow transition-colors duration-300 w-max"
-                        >
-                            <a href="#">Контакти</a>
-                        </li>
-                    </ul>
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'menu-footer',
+                        'menu_class' => '',
+                        'container' => false,
+                        'walker' => new Footer_Walker_Nav_Menu()
+                    )); ?>
                 </div>
                 <div
                         class="lg:col-start-10 lg:col-end-13 grid grid-cols-2 gap-24 lg:gap-0 lg:block"
@@ -477,7 +429,7 @@ global $IS_NEW;
                                 <use href="#telegram-icon"></use>
                             </svg>
                         </a>
-                        <?php if(1!==1): ?>
+                        <?php if (1 !== 1): ?>
                             <a
                                     href="#"
                                     class="size-40 bg-yellow lg:hover:bg-white transition-colors duration-300 rounded"
@@ -486,7 +438,7 @@ global $IS_NEW;
                                     <use href="#viber-icon"></use>
                                 </svg>
                             </a>
-                        <?php endif;?>
+                        <?php endif; ?>
 
                     </div>
                 </div>
@@ -525,13 +477,14 @@ global $IS_NEW;
                     <div class="flex flex-wrap gap-24 lg:gap-50">
                         <a href="https://dsns.gov.ua/" target="_blank"
 
-                                class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
+                           class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
                         >
-                            <img class="size-full" src="<?= dn_get_img_link('dsns.svg'); ?>" alt="<?php pll_e('Державна служба України з надзвичайних ситуацій'); ?>"/>
+                            <img class="size-full" src="<?= dn_get_img_link('dsns.svg'); ?>"
+                                 alt="<?php pll_e('Державна служба України з надзвичайних ситуацій'); ?>"/>
                         </a>
                         <a href="https://prykhystok.gov.ua/" target="_blank"
 
-                                class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
+                           class="h-40 sm:h-50 w-max lg:hover:scale-[1.1] transition-transform duration-300"
                         >
                             <img class="size-full" src="<?= dn_get_img_link('pryhustok.svg'); ?>" alt="ПРИХИСТОК"/>
                         </a>

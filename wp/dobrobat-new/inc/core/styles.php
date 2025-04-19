@@ -3,7 +3,7 @@
 if (!function_exists('dobrobat_styles_setup')) :
     function dobrobat_styles_setup()
     {
-        $release_version = '2.0.5';
+        $release_version = '2.0.6';
         if (get_field('isNew_design', get_the_ID())):
             wp_enqueue_style('tailwind-style', get_theme_file_uri('/assets/redesign/css/tailwind.min.css'), array(), $release_version);
             wp_enqueue_style('swiper-style', get_theme_file_uri('/assets/redesign/css/swiper.min.css'), array(), $release_version);

@@ -1,4 +1,58 @@
-//@import "../base/core/functions";
-//@import "burger";
-//@import "button";
-//@import "../base/variables";
+.menu {
+
+
+  @media all and (min-width: 993px) {
+    .submenu {
+      .menu__button {
+        cursor: pointer;
+      }
+
+      &::after {
+        cursor: default;
+        height: calc(100% - .9rem);
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        content: '';
+        position: absolute;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .menu__content {
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+
+        &:hover {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &:hover {
+        .menu__button {
+          color: var(--yellow);
+
+          svg {
+            fill: var(--yellow);
+            transform: rotate(45deg);
+          }
+        }
+
+        &:after {
+          width: 50%;
+        }
+
+        .menu__content {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+
+  }
+}

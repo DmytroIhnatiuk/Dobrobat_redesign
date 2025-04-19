@@ -1,5 +1,5 @@
 <div class="flex items-center">
-    <nav class="lg:mr-36">
+    <nav class="lg:mr-36 nav-menu">
         <ul class="hidden lg:flex">
             <li class="nav-link">
                 <a href="#ambasadors" class="scroll-to"><?php pll_e('Амбасадори'); ?></a>
