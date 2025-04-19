@@ -1,4 +1,3 @@
-import HeaderComponent from './modules/HeaderComponent.js'
 import './libs/dynamic_adapt.js'
 import * as flsFunctions from './core/functions.js'
 import { scrollToAnchor } from './modules/scrollToAnchor.js'
@@ -13,14 +12,13 @@ import {
 	volunteersSlider,
 	ourТeamSlider,
 	ourTeamSlider,
-	partnersSlider,
 } from './modules/sliders.js'
 import Marquee from 'vanilla-marquee'
 import '../scss/tailwind/index.scss'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/thumbs'
-import '../scss/style.scss'
+// import 'swiper/css'
+// import 'swiper/css/navigation'
+// import 'swiper/css/thumbs'
+// import '../scss/style.scss'
 import { getElements } from './core/index.js'
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
@@ -60,7 +58,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		headerFixed()
 		burger()
 		aboutUsSlider()
-		partnersSlider()
 		newsSlider()
 		volunteersSlider()
 		ourTeamSlider()
