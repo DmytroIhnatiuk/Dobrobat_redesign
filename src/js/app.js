@@ -5,10 +5,10 @@ import {headerFixed} from './modules/index.js'
 import burger from './modules/burger.js'
 import initMenus from './modules/menuCustom.js';
 import Marquee from 'vanilla-marquee'
-// import '../scss/tailwind/index.scss'
-// import 'swiper/css'
-// import 'swiper/css/navigation'
-// import 'swiper/css/thumbs'
+import '../scss/tailwind/index.scss'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/thumbs'
 import '../scss/style.scss'
 import {getElements} from "./core/index.js";
 
