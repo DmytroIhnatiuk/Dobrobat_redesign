@@ -15,10 +15,10 @@ import {
 } from './modules/sliders.js'
 import Marquee from 'vanilla-marquee'
 import '../scss/tailwind/index.scss'
-// import 'swiper/css'
-// import 'swiper/css/navigation'
-// import 'swiper/css/thumbs'
-// import '../scss/style.scss'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/thumbs'
+import '../scss/style.scss'
 import { getElements } from './core/index.js'
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
