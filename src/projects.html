@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"HomePage"})
+	<body class="body font-body">
+		<div class="page-container">
+			@@include('html/_header.htm',{})
+
+			<main>
+				<div class="mt-auto"></div>
+				<section
+					class="mt-[calc(var(--header-height)+.28rem)] font-semibold overflow-hidden box-shadow mb-24 lg:mb-50"
+				>
+					<div class="container">
+						<div
+							class="bg-white mb-24 px-12 p-40 sm:px-40 rounded-24 overflow-hidden relative marquee-wrapper will-change-transform"
+						>
+							<div
+								class="border border-black border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-50"
+							>
+								Ініціативи
+							</div>
+							<div
+								class="grid grid-cols-[1fr,0.48rem] lg:flex justify-between gap-16 items-end"
+							>
+								<h1 class="h2 font-bold col-start-1 col-end-3">Наші проєкти</h1>
+								<div
+									class="border h-[.48rem] border-solid border-gray rounded-24 flex justify-between items-center lg:w-[4.7rem] uppercase text-s pl-16 overflow-hidden pr-8 coll-start-1 coll-end-2"
+								>
+									<input class="w-9/12" type="text" placeholder="ПОШУК" />
+									<button>
+										<svg class="size-24 stroke-gray z-10 fill-none">
+											<use href="#search-icon"></use>
+										</svg>
+									</button>
+								</div>
+								<!-- TO DO треба додати сортування -->
+								<div
+									class="h-[.48rem] border border-solid border-black py-16 pl-16 pr-8 flex-center rounded-24 min-w-[.48rem] flex-shrink"
+								>
+									<span class="hidden lg:block">СОРТУВАННЯ</span>
+								</div>
+							</div>
+							<div
+								class="marquee text-transparent text-row absolute top-50 sm:top-[.65rem] left-[4rem] lg:left-[5rem] font-semibold text-[.28rem] sm:text-[.4rem] w-full rotate-[5.9deg] opacity-30"
+							>
+								відновлення / відбудова / реконструкція / відновлення /
+							</div>
+						</div>
+						<div class="grid lg:grid-cols-[1fr,3fr] gap-20">
+							<div class="flex lg:block overflow-x-scroll gap-12">
+								<button
+									class="border border-solid border-black rounded-30 bg-transparent uppercase text-s font-bold p-16 w-[1.9rem] hover:bg-yellow transition-colors duration-300 ease-linear hover:border-yellow lg:mb-16 last:mb-0"
+								>
+									Всі
+								</button>
+								<button
+									class="border border-solid border-black rounded-30 bg-transparent uppercase text-s font-bold p-16 w-[1.9rem] hover:bg-yellow transition-colors duration-300 ease-linear hover:border-yellow lg:mb-16 last:mb-0"
+								>
+									Освіта
+								</button>
+							</div>
+							<div>
+								<div
+									class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear mb-16 last:mb-0"
+								>
+									<div
+										class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+									>
+										<img
+											class="object-cover"
+											src="@img/ubout_1.png"
+											alt="img"
+										/>
+									</div>
+
+									<div>
+										<div class="flex lg:block gap-12 items-center">
+											<div
+												class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
+											>
+												01
+											</div>
+											<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
+												Відбудова
+											</h2>
+										</div>
+										<div class="lg:flex gap-32 items-end">
+											<p class="lg:mb-0 mb-12">
+												Волонтери «Добробату» вже успішно реалізували нагальну
+												відбудову та розбір завалів у 87-ми населених пунктах
+												України
+											</p>
+											<button
+												class="min-w-[2.4rem] w-full sm:w-auto h-[.48rem] btn outline-black hover-black group justify-between p-16"
+											>
+												<span class="z-10">детальніше</span>
+												<svg
+													class="size-24 fill-black lg:group-hover:fill-white"
+												>
+													<use href="#btn-arrow-icon"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div
+									class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear mb-16 last:mb-0"
+								>
+									<div
+										class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+									>
+										<img
+											class="object-cover"
+											src="@img/Rectangle 12760.png"
+											alt="img"
+										/>
+									</div>
+
+									<div>
+										<div class="flex lg:block gap-12 items-center">
+											<div
+												class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
+											>
+												02
+											</div>
+											<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
+												Зігрій
+											</h2>
+										</div>
+										<div class="lg:flex gap-32 items-end">
+											<p class="lg:mb-0 mb-12">
+												Ми допомагаємо родинам залишатися зі світлом, теплом та
+												зв’язком у найскрутніші часи
+											</p>
+											<button
+												class="min-w-[2.4rem] w-full sm:w-auto h-[.48rem] btn outline-black hover-black group justify-between p-16"
+											>
+												<span class="z-10">детальніше</span>
+												<svg
+													class="size-24 fill-black lg:group-hover:fill-white"
+												>
+													<use href="#btn-arrow-icon"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div
+									class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear mb-16 last:mb-0"
+								>
+									<div
+										class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+									>
+										<img
+											class="object-cover"
+											src="@img/ubout_1.png"
+											alt="img"
+										/>
+									</div>
+
+									<div>
+										<div class="flex lg:block gap-12 items-center">
+											<div
+												class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
+											>
+												03
+											</div>
+											<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
+												Добробат освіта
+											</h2>
+										</div>
+										<div class="lg:flex gap-32 items-end">
+											<p class="lg:mb-0 mb-12">
+												Навчаємо волонтерів та студентів ПТУ професійним
+												будівельним навичкам для якісного виконання робіт
+											</p>
+											<button
+												class="min-w-[2.4rem] w-full sm:w-auto h-[.48rem] btn outline-black hover-black group justify-between p-16"
+											>
+												<span class="z-10">детальніше</span>
+												<svg
+													class="size-24 fill-black lg:group-hover:fill-white"
+												>
+													<use href="#btn-arrow-icon"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div
+									class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear mb-16 last:mb-0"
+								>
+									<div
+										class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+									>
+										<img
+											class="object-cover"
+											src="@img/ubout_1.png"
+											alt="img"
+										/>
+									</div>
+
+									<div>
+										<div class="flex lg:block gap-12 items-center">
+											<div
+												class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
+											>
+												04
+											</div>
+											<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
+												Гуманітарна допомога
+											</h2>
+										</div>
+										<div class="lg:flex gap-32 items-end">
+											<p class="lg:mb-0 mb-12">
+												Навчаємо волонтерів та студентів ПТУ професійним
+												будівельним навичкам для якісного виконання робіт
+											</p>
+											<button
+												class="min-w-[2.4rem] w-full sm:w-auto h-[.48rem] btn outline-black hover-black group justify-between p-16"
+											>
+												<span class="z-10">детальніше</span>
+												<svg
+													class="size-24 fill-black lg:group-hover:fill-white"
+												>
+													<use href="#btn-arrow-icon"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<button class="btn fill_yellow hover-black mx-auto p-16 group">
+									<span class="z-10 mr-16">показати ще</span>
+									<svg
+										class="size-24 fill-black lg:group-hover:!fill-white rotate-[135deg]"
+									>
+										<use href="#btn-arrow-icon"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="mb-24 lg:mb-50">
+					<div class="container">
+						<div
+							class="bg-white rounded-24 box__shadow px-12 sm:px-40 p-24 sm:pb-[.74rem]"
+						>
+							<div
+								class="border border-black border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-16"
+							>
+								Друзі
+							</div>
+
+							<h2 class="font-bold mb-[.9rem] lg:mb-[1.88rem]">
+								Партнери проєкту
+							</h2>
+
+							<div
+								class="swiper mb-24 sm:mb-40 h-100 sm:h-[1.5rem]"
+								data-swiper="partnersSlider"
+							>
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 !p-16"
+											href="#"
+										>
+											<img src="@img/Dnipro-M_logo.png" alt="partner" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												width="285"
+												height="150"
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro.png?lossy=1&amp;strip=1&amp;webp=1"
+												class=""
+												alt="http://dobro.ua"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro.png?lossy=1&amp;strip=1&amp;webp=1                 399w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro-300x158.png?lossy=1&amp;strip=1&amp;webp=1         300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro-375x197.png?lossy=1&amp;strip=1&amp;webp=1         375w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro.png?size=128x67&amp;lossy=1&amp;strip=1&amp;webp=1 128w
+												"
+												sizes="(max-width: 399px) 100vw, 399px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												src="https://static.wixstatic.com/media/163007_e3c9af65489749f396063c414f8ddf84~mv2.png/v1/fill/w_246,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Dream-Ukraine-small-logo.png"
+												alt="https://www.dreamua.win/?fs=e&amp;s=cl"
+												class=""
+												loading="lazy"
+										/></a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lggrayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												width="300"
+												height="97"
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?lossy=1&amp;strip=1&amp;webp=1"
+												class=""
+												alt="https://evrasia.in.ua/"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?lossy=1&amp;strip=1&amp;webp=1                   3120w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-300x97.png?lossy=1&amp;strip=1&amp;webp=1             300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-1024x332.png?lossy=1&amp;strip=1&amp;webp=1          1024w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-768x249.png?lossy=1&amp;strip=1&amp;webp=1            768w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-1536x499.png?lossy=1&amp;strip=1&amp;webp=1          1536w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-2048x665.png?lossy=1&amp;strip=1&amp;webp=1          2048w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-375x122.png?lossy=1&amp;strip=1&amp;webp=1            375w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=128x42&amp;lossy=1&amp;strip=1&amp;webp=1    128w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=512x166&amp;lossy=1&amp;strip=1&amp;webp=1   512w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=640x208&amp;lossy=1&amp;strip=1&amp;webp=1   640w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=1280x416&amp;lossy=1&amp;strip=1&amp;webp=1 1280w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=1920x623&amp;lossy=1&amp;strip=1&amp;webp=1 1920w
+												"
+												sizes="(max-width: 3120px) 100vw, 3120px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												width="300"
+												height="98"
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-300x98.png?lossy=1&amp;strip=1&amp;webp=1"
+												class=""
+												alt="https://www.skoda-auto.ua/"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-300x98.png?lossy=1&amp;strip=1&amp;webp=1             300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-1024x336.png?lossy=1&amp;strip=1&amp;webp=1          1024w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-768x252.png?lossy=1&amp;strip=1&amp;webp=1            768w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-1536x504.png?lossy=1&amp;strip=1&amp;webp=1          1536w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-2048x672.png?lossy=1&amp;strip=1&amp;webp=1          2048w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-375x123.png?lossy=1&amp;strip=1&amp;webp=1            375w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-260x85.png?lossy=1&amp;strip=1&amp;webp=1             260w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-400x131.png?lossy=1&amp;strip=1&amp;webp=1            400w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-600x197.png?lossy=1&amp;strip=1&amp;webp=1            600w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-360x118.png?lossy=1&amp;strip=1&amp;webp=1            360w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-100x33.png?lossy=1&amp;strip=1&amp;webp=1             100w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-56x18.png?lossy=1&amp;strip=1&amp;webp=1               56w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815.png?size=512x168&amp;lossy=1&amp;strip=1&amp;webp=1   512w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815.png?size=1280x420&amp;lossy=1&amp;strip=1&amp;webp=1 1280w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815.png?size=1920x630&amp;lossy=1&amp;strip=1&amp;webp=1 1920w
+												"
+												sizes="(max-width: 2560px) 100vw, 2560px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												width="300"
+												height="121"
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434.png?lossy=1&amp;strip=1&amp;webp=1"
+												class=""
+												alt="https://www.vasylevskyfund.org/"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434.png?lossy=1&amp;strip=1&amp;webp=1                 500w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434-300x121.png?lossy=1&amp;strip=1&amp;webp=1         300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434-375x151.png?lossy=1&amp;strip=1&amp;webp=1         375w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434.png?size=128x51&amp;lossy=1&amp;strip=1&amp;webp=1 128w
+												"
+												sizes="(max-width: 500px) 100vw, 500px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lggrayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 !p-16"
+											href="#"
+										>
+											<img
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?lossy=1&amp;strip=1&amp;webp=1"
+												class="max-h-full"
+												alt="https://ehrh.org/"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?lossy=1&amp;strip=1&amp;webp=1                  940w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh-300x251.jpg?lossy=1&amp;strip=1&amp;webp=1          300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh-768x644.jpg?lossy=1&amp;strip=1&amp;webp=1          768w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?size=128x107&amp;lossy=1&amp;strip=1&amp;webp=1 128w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?size=384x322&amp;lossy=1&amp;strip=1&amp;webp=1 384w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?size=512x429&amp;lossy=1&amp;strip=1&amp;webp=1 512w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?size=640x537&amp;lossy=1&amp;strip=1&amp;webp=1 640w
+												"
+												sizes="(max-width: 940px) 100vw, 940px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												src="https://www.giz.de/static/en/images/giz-logo.gif"
+												alt="https://www.giz.de/en/worldwide/32413.html"
+												class=""
+												loading="lazy"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												src="https://penosil.com/ua/wp-content/themes/penosil/images/icons/penosil-logo.svg"
+												alt="https://penosil.com/ua/"
+												class=""
+												loading="lazy"
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div
+								dir="rtl"
+								]ґ
+								class="swiper mb-24 sm:mb-40 h-100 sm:h-[1.5rem]"
+								data-swiper="partnersSlider"
+							>
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 !p-16"
+											href="#"
+										>
+											<img src="@img/Dnipro-M_logo.png" alt="partner" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												width="285"
+												height="150"
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro.png?lossy=1&amp;strip=1&amp;webp=1"
+												class=""
+												alt="http://dobro.ua"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro.png?lossy=1&amp;strip=1&amp;webp=1                 399w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro-300x158.png?lossy=1&amp;strip=1&amp;webp=1         300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro-375x197.png?lossy=1&amp;strip=1&amp;webp=1         375w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/dobro.png?size=128x67&amp;lossy=1&amp;strip=1&amp;webp=1 128w
+												"
+												sizes="(max-width: 399px) 100vw, 399px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												src="https://static.wixstatic.com/media/163007_e3c9af65489749f396063c414f8ddf84~mv2.png/v1/fill/w_246,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Dream-Ukraine-small-logo.png"
+												alt="https://www.dreamua.win/?fs=e&amp;s=cl"
+												class=""
+												loading="lazy"
+										/></a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lggrayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												width="300"
+												height="97"
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?lossy=1&amp;strip=1&amp;webp=1"
+												class=""
+												alt="https://evrasia.in.ua/"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?lossy=1&amp;strip=1&amp;webp=1                   3120w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-300x97.png?lossy=1&amp;strip=1&amp;webp=1             300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-1024x332.png?lossy=1&amp;strip=1&amp;webp=1          1024w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-768x249.png?lossy=1&amp;strip=1&amp;webp=1            768w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-1536x499.png?lossy=1&amp;strip=1&amp;webp=1          1536w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-2048x665.png?lossy=1&amp;strip=1&amp;webp=1          2048w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva-375x122.png?lossy=1&amp;strip=1&amp;webp=1            375w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=128x42&amp;lossy=1&amp;strip=1&amp;webp=1    128w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=512x166&amp;lossy=1&amp;strip=1&amp;webp=1   512w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=640x208&amp;lossy=1&amp;strip=1&amp;webp=1   640w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=1280x416&amp;lossy=1&amp;strip=1&amp;webp=1 1280w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/logo-bez-dereva.png?size=1920x623&amp;lossy=1&amp;strip=1&amp;webp=1 1920w
+												"
+												sizes="(max-width: 3120px) 100vw, 3120px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												width="300"
+												height="98"
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-300x98.png?lossy=1&amp;strip=1&amp;webp=1"
+												class=""
+												alt="https://www.skoda-auto.ua/"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-300x98.png?lossy=1&amp;strip=1&amp;webp=1             300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-1024x336.png?lossy=1&amp;strip=1&amp;webp=1          1024w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-768x252.png?lossy=1&amp;strip=1&amp;webp=1            768w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-1536x504.png?lossy=1&amp;strip=1&amp;webp=1          1536w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-2048x672.png?lossy=1&amp;strip=1&amp;webp=1          2048w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-375x123.png?lossy=1&amp;strip=1&amp;webp=1            375w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-260x85.png?lossy=1&amp;strip=1&amp;webp=1             260w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-400x131.png?lossy=1&amp;strip=1&amp;webp=1            400w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-600x197.png?lossy=1&amp;strip=1&amp;webp=1            600w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-360x118.png?lossy=1&amp;strip=1&amp;webp=1            360w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-100x33.png?lossy=1&amp;strip=1&amp;webp=1             100w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815-56x18.png?lossy=1&amp;strip=1&amp;webp=1               56w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815.png?size=512x168&amp;lossy=1&amp;strip=1&amp;webp=1   512w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815.png?size=1280x420&amp;lossy=1&amp;strip=1&amp;webp=1 1280w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/skoda_wordmark_rgb_electric_on_emerald_green_b5b9c815.png?size=1920x630&amp;lossy=1&amp;strip=1&amp;webp=1 1920w
+												"
+												sizes="(max-width: 2560px) 100vw, 2560px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												width="300"
+												height="121"
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434.png?lossy=1&amp;strip=1&amp;webp=1"
+												class=""
+												alt="https://www.vasylevskyfund.org/"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434.png?lossy=1&amp;strip=1&amp;webp=1                 500w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434-300x121.png?lossy=1&amp;strip=1&amp;webp=1         300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434-375x151.png?lossy=1&amp;strip=1&amp;webp=1         375w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/blagodijnyj_fond_im_m_vasylevskogo-e1664233549434.png?size=128x51&amp;lossy=1&amp;strip=1&amp;webp=1 128w
+												"
+												sizes="(max-width: 500px) 100vw, 500px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lggrayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 !p-16"
+											href="#"
+										>
+											<img
+												src="https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?lossy=1&amp;strip=1&amp;webp=1"
+												class="max-h-full"
+												alt="https://ehrh.org/"
+												decoding="async"
+												loading="lazy"
+												srcset="
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?lossy=1&amp;strip=1&amp;webp=1                  940w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh-300x251.jpg?lossy=1&amp;strip=1&amp;webp=1          300w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh-768x644.jpg?lossy=1&amp;strip=1&amp;webp=1          768w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?size=128x107&amp;lossy=1&amp;strip=1&amp;webp=1 128w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?size=384x322&amp;lossy=1&amp;strip=1&amp;webp=1 384w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?size=512x429&amp;lossy=1&amp;strip=1&amp;webp=1 512w,
+													https://b2903718.smushcdn.com/2903718/wp-content/uploads/2022/07/ehrh.jpg?size=640x537&amp;lossy=1&amp;strip=1&amp;webp=1 640w
+												"
+												sizes="(max-width: 940px) 100vw, 940px"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												src="https://www.giz.de/static/en/images/giz-logo.gif"
+												alt="https://www.giz.de/en/worldwide/32413.html"
+												class=""
+												loading="lazy"
+											/>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a
+											class="size-full flex-center lg:grayscale lg:hover:grayscale-0 transition-[filter] duration-300 bg-light-gray rounded-16 p-16"
+											href="#"
+										>
+											<img
+												src="https://penosil.com/ua/wp-content/themes/penosil/images/icons/penosil-logo.svg"
+												alt="https://penosil.com/ua/"
+												class=""
+												loading="lazy"
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_modal.htm',{}) @@include('html/_svg.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
