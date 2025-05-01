@@ -1,74 +1,75 @@
-import fs from 'fs';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace';
-import CopyPlugin from "copy-webpack-plugin";
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import TerserPlugin from "terser-webpack-plugin";
+import fs from 'fs'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace'
+import CopyPlugin from 'copy-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
 
-import * as path from 'path';
+import * as path from 'path'
 
+const srcFolder = 'src'
+const builFolder = 'dist'
+const rootFolder = path.basename(path.resolve())
 
-const srcFolder = "src";
-const builFolder = "dist";
-const rootFolder = path.basename(path.resolve());
-
-let cssImagesWebpLoader, htmlImagesWebpLoader;
+let cssImagesWebpLoader, htmlImagesWebpLoader
 
 cssImagesWebpLoader = {
 	loader: 'string-replace-loader',
 	options: {
 		search: '.png|.jpeg|.jpg|.gif',
 		replace: '.webp',
-		flags: 'ig'
-	}
+		flags: 'ig',
+	},
 }
 htmlImagesWebpLoader = {
-	regex: '.png|.jpeg|.jpg|.gif', to: '.webp'
+	regex: '.png|.jpeg|.jpg|.gif',
+	to: '.webp',
 }
 
-let pugPages = fs.readdirSync(srcFolder).filter(fileName => fileName.endsWith('.pug'))
-let htmlPages = [];
+let pugPages = fs
+	.readdirSync(srcFolder)
+	.filter(fileName => fileName.endsWith('.pug'))
+let htmlPages = []
 
 if (!pugPages.length) {
-	htmlPages = [new FileIncludeWebpackPlugin({
-		source: srcFolder,
-		destination: '../',
-		htmlBeautifyOptions: {
-			"indent-with-tabs": true,
-			'indent_size': 3
-		},
-		replace: [
-			{ regex: '../img', to: 'img' },
-			{ regex: '@img', to: 'img' },
-			htmlImagesWebpLoader,
-			{ regex: 'NEW_PROJECT_NAME', to: rootFolder }
-		],
-	})]
+	htmlPages = [
+		new FileIncludeWebpackPlugin({
+			source: srcFolder,
+			destination: '../',
+			htmlBeautifyOptions: {
+				'indent-with-tabs': true,
+				indent_size: 3,
+			},
+			replace: [
+				{ regex: '../img', to: 'img' },
+				{ regex: '@img', to: 'img' },
+				htmlImagesWebpLoader,
+				{ regex: 'NEW_PROJECT_NAME', to: rootFolder },
+			],
+		}),
+	]
 }
 
 const paths = {
 	src: path.resolve(srcFolder),
-	build: path.resolve(builFolder)
+	build: path.resolve(builFolder),
 }
 const config = {
-	mode: "production",
+	mode: 'production',
 	cache: {
-		type: 'filesystem'
+		type: 'filesystem',
 	},
 	optimization: {
-		minimizer: [new TerserPlugin({
-			extractComments: false,
-		})],
+		minimizer: [
+			new TerserPlugin({
+				extractComments: false,
+			}),
+		],
 	},
 	entry: {
 		app: `${paths.src}/js/app.js`,
 		team: `${paths.src}/js/pages/team.js`,
-		// catalog: `${paths.src}/js/pages/catalog.js`,
-		// product: `${paths.src}/js/pages/product.js`,
-		// cart: `${paths.src}/js/pages/cart.js`,
-		// user: `${paths.src}/js/pages/user.js`,
-		home: `${paths.src}/js/pages/home.js`,
-		// checkout: `${paths.src}/js/pages/checkout.js`,
+		projects: `${paths.src}/js/pages/projects.js`,
 	},
 
 	output: {
@@ -87,9 +88,10 @@ const config = {
 						options: {
 							search: '@img',
 							replace: '../img',
-							flags: 'ig'
-						}
-					}, cssImagesWebpLoader,
+							flags: 'ig',
+						},
+					},
+					cssImagesWebpLoader,
 					{
 						loader: 'css-loader',
 						options: {
@@ -98,10 +100,10 @@ const config = {
 							modules: false,
 							url: {
 								filter: (url, resourcePath) => {
-									if (url.includes("img") || url.includes("fonts")) {
-										return false;
+									if (url.includes('img') || url.includes('fonts')) {
+										return false
 									}
-									return true;
+									return true
 								},
 							},
 						},
@@ -111,76 +113,88 @@ const config = {
 						loader: 'sass-loader',
 						options: {
 							sassOptions: {
-								outputStyle: "expanded",
+								outputStyle: 'expanded',
 							},
-						}
+						},
 					},
 				],
-			}, {
+			},
+			{
 				test: /\.pug$/,
 				use: [
 					{
-						loader: 'pug-loader'
-					}, {
+						loader: 'pug-loader',
+					},
+					{
 						loader: 'string-replace-loader',
 						options: {
 							search: '@img',
 							replace: 'img',
-							flags: 'g'
-						}
-					}
-				]
-			}, {
+							flags: 'g',
+						},
+					},
+				],
+			},
+			{
 				test: /\.(png|jpe?g|gif|svg)$/i,
 				loader: 'file-loader',
 				options: {
 					name: '[path][name].[ext]',
-				}
-			}, {
+				},
+			},
+			{
 				test: /\.(jsx)$/,
 				exclude: /node_modules/,
 				use: [
 					{
-						loader: "babel-loader",
+						loader: 'babel-loader',
 						options: {
-							presets: ["@babel/preset-react"],
-						}
-					}
+							presets: ['@babel/preset-react'],
+						},
+					},
 				],
 			},
 		],
 	},
 	plugins: [
 		...htmlPages,
-		...pugPages.map(pugPage => new HtmlWebpackPlugin({
-			minify: false,
-			template: `${srcFolder}/${pugPage}`,
-			filename: `../${pugPage.replace(/\.pug/, '.html')}`
-		})),
+		...pugPages.map(
+			pugPage =>
+				new HtmlWebpackPlugin({
+					minify: false,
+					template: `${srcFolder}/${pugPage}`,
+					filename: `../${pugPage.replace(/\.pug/, '.html')}`,
+				})
+		),
 		new MiniCssExtractPlugin({
 			filename: '../css/style.css',
 		}),
 		new CopyPlugin({
 			patterns: [
 				{
-					from: `${paths.src}/files`, to: `../files`,
-					noErrorOnMissing: true
-				}, {
-					from: `${paths.src}/php`, to: `../`,
-					noErrorOnMissing: true
-				}, {
-					from: `${paths.src}/favicon.ico`, to: `../`,
-					noErrorOnMissing: true
-				}
+					from: `${paths.src}/files`,
+					to: `../files`,
+					noErrorOnMissing: true,
+				},
+				{
+					from: `${paths.src}/php`,
+					to: `../`,
+					noErrorOnMissing: true,
+				},
+				{
+					from: `${paths.src}/favicon.ico`,
+					to: `../`,
+					noErrorOnMissing: true,
+				},
 			],
-		})
+		}),
 	],
 	resolve: {
 		alias: {
-			"@scss": `${paths.src}/scss`,
-			"@js": `${paths.src}/js`,
-			"@img": `${paths.src}/img`
+			'@scss': `${paths.src}/scss`,
+			'@js': `${paths.src}/js`,
+			'@img': `${paths.src}/img`,
 		},
 	},
 }
-export default config;
+export default config

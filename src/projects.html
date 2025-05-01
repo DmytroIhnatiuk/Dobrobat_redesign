@@ -1,21 +1,37 @@
 <!doctype html>
-<html lang="en">
-	@@include('html/_head.htm',{ "title":"HomePage"})
+<html lang="ua">
+	@@include('html/_head.htm',{ "title":"projects"})
 	<body class="body font-body">
 		<div class="page-container">
 			@@include('html/_header.htm',{})
 
 			<main>
 				<div class="mt-auto"></div>
+
 				<section
-					class="mt-[calc(var(--header-height)+.28rem)] font-semibold overflow-hidden box-shadow mb-24 lg:mb-50"
+					class="mt-[calc(var(--header-height)+.28rem)] font-semibold mb-24 lg:mb-50"
 				>
 					<div class="container">
 						<div
-							class="bg-white mb-24 px-12 p-40 sm:px-40 rounded-24 overflow-hidden relative marquee-wrapper will-change-transform"
+							class="bg-white mb-24 px-12 p-40 sm:px-40 rounded-24 relative marquee-wrapper will-change-transform z-10"
 						>
+							<div class="flex text-s font-medium mb-16">
+								<a
+									class="lg:hover:text-yellow transition-colors duration-300 ease-linear last:pointer-events-none"
+									href="index.html"
+								>
+									Головна
+								</a>
+								<span class="px-4">/</span>
+								<a
+									class="lg:hover:text-yellow transition-colors duration-300 ease-linear last:pointer-events-none"
+									href="index.html"
+								>
+									Наші проєкти
+								</a>
+							</div>
 							<div
-								class="border border-black border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-50"
+								class="border border-black border-solid rounded-30 px-12 py-4 font-medium text-l w-max mb-40"
 							>
 								Ініціативи
 							</div>
@@ -34,211 +50,220 @@
 									</button>
 								</div>
 								<!-- TO DO треба додати сортування -->
-								<div
-									class="h-[.48rem] border border-solid border-black py-16 pl-16 pr-8 flex-center rounded-24 min-w-[.48rem] flex-shrink"
-								>
-									<span class="hidden lg:block">СОРТУВАННЯ</span>
+								<div class="dropdown relative z-50">
+									<div
+										class="dropdown__btn lg:min-w-[2.9rem] flex lg:justify-between gap-8 border border-solid border-black px-8 sm:px-12 py-8 rounded-30 cursor-pointer justify-between bg-white relative z-50 h-[.48rem] w-[.48rem] flex-center"
+									>
+										<span
+											class="dropdown__active hidden lg:block"
+											data-active=""
+											data-selected=""
+											><span></span>
+										</span>
+										<span
+											class="dropdown__icon transition-transform duration-300 hidden lg:block"
+										>
+											<svg class="size-24 fill-none stroke-black">
+												<use xlink:href="#cheven-icon"></use>
+											</svg>
+										</span>
+										<svg
+											class="size-24 stroke-black fill-transparent lg:hidden"
+										>
+											<use xlink:href="#sorting-icon"></use>
+										</svg>
+									</div>
+									<div
+										class="dropdown__content pt-32 pb-16 opacity-0 rounded-b-16 rounded-tl-16 lg:rounded-tl-0 bg-light-gray box-shadow absolute right-0 w-max lg:w-full top-1/2 transition-opacity duration-300 ease-linear z-40 text-black"
+									>
+										<ul class="dropdown__list">
+											<li
+												class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-yellow transition-colors duration-300 py-4 px-16"
+											>
+												Сoртувати за замовчуванням
+											</li>
+											<li
+												class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-yellow transition-colors duration-300 py-4 px-16"
+											>
+												Сортувати від нових
+											</li>
+											<li
+												class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-yellow transition-colors duration-300 py-4 px-16"
+											>
+												Сортувати від старих
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div
-								class="marquee text-transparent text-row absolute top-50 sm:top-[.65rem] left-[4rem] lg:left-[5rem] font-semibold text-[.28rem] sm:text-[.4rem] w-full rotate-[5.9deg] opacity-30"
+								class="absolute top-0 -z-10 right-0 bottom-0 left-0 overflow-hidden rounded-24"
 							>
-								відновлення / відбудова / реконструкція / відновлення /
+								<div
+									class="marquee text-transparent text-row absolute top-50 sm:top-[.35rem] left-[4rem] lg:left-[5rem] font-semibold text-[.28rem] sm:text-[.4rem] w-full rotate-[5.9deg] opacity-30"
+								>
+									відновлення / відбудова / реконструкція / відновлення /
+								</div>
 							</div>
 						</div>
-						<div class="grid lg:grid-cols-[1fr,3fr] gap-20">
-							<div class="flex lg:block overflow-x-scroll gap-12">
-								<button
-									class="border border-solid border-black rounded-30 bg-transparent uppercase text-s font-bold p-16 w-[1.9rem] hover:bg-yellow transition-colors duration-300 ease-linear hover:border-yellow lg:mb-16 last:mb-0"
+						<div class="grid lg:grid-cols-2 gap-20 mb-32">
+							<div
+								class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear"
+							>
+								<div
+									class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0 z-0"
 								>
-									Всі
-								</button>
-								<button
-									class="border border-solid border-black rounded-30 bg-transparent uppercase text-s font-bold p-16 w-[1.9rem] hover:bg-yellow transition-colors duration-300 ease-linear hover:border-yellow lg:mb-16 last:mb-0"
-								>
-									Освіта
-								</button>
+									<img class="object-cover" src="@img/ubout_1.png" alt="img" />
+								</div>
+
+								<div>
+									<div class="flex lg:block gap-12 items-center">
+										<div
+											class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
+										>
+											01
+										</div>
+										<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
+											Відбудова
+										</h2>
+									</div>
+
+									<p class="mb-12">
+										Волонтери «Добробату» вже успішно реалізували нагальну
+										відбудову та розбір завалів у 87-ми населених пунктах
+										України
+									</p>
+									<a
+										href="#"
+										class="sm:w-[2.4rem] w-full h-[.48rem] btn outline-black hover-black group gap-8 p-16"
+									>
+										<span class="z-10">детальніше</span>
+										<svg class="size-16 fill-black lg:group-hover:fill-white">
+											<use href="#btn-arrow-icon"></use>
+										</svg>
+									</a>
+								</div>
 							</div>
-							<div>
+							<div
+								class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear"
+							>
 								<div
-									class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear mb-16 last:mb-0"
+									class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
 								>
-									<div
-										class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+									<img
+										class="object-cover"
+										src="@img/Rectangle 12760.png"
+										alt="img"
+									/>
+								</div>
+
+								<div>
+									<div class="flex lg:block gap-12 items-center">
+										<div
+											class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
+										>
+											02
+										</div>
+										<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
+											Зігрій
+										</h2>
+									</div>
+									<p class="mb-12">
+										Ми допомагаємо родинам залишатися зі світлом, теплом та
+										зв’язком у найскрутніші часи
+									</p>
+									<a
+										href="#"
+										class="sm:w-[2.4rem] w-full h-[.48rem] btn outline-black hover-black group gap-8 p-16"
 									>
-										<img
-											class="object-cover"
-											src="@img/ubout_1.png"
-											alt="img"
-										/>
+										<span class="z-10">детальніше</span>
+										<svg class="size-16 fill-black lg:group-hover:fill-white">
+											<use href="#btn-arrow-icon"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div
+								class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear"
+							>
+								<div
+									class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+								>
+									<img class="object-cover" src="@img/ubout_1.png" alt="img" />
+								</div>
+
+								<div>
+									<div class="flex lg:block gap-12 items-center">
+										<div
+											class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
+										>
+											03
+										</div>
+										<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
+											Добробат освіта
+										</h2>
 									</div>
 
-									<div>
-										<div class="flex lg:block gap-12 items-center">
-											<div
-												class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
-											>
-												01
-											</div>
-											<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
-												Відбудова
-											</h2>
-										</div>
-										<div class="lg:flex gap-32 items-end">
-											<p class="lg:mb-0 mb-12">
-												Волонтери «Добробату» вже успішно реалізували нагальну
-												відбудову та розбір завалів у 87-ми населених пунктах
-												України
-											</p>
-											<button
-												class="min-w-[2.4rem] w-full sm:w-auto h-[.48rem] btn outline-black hover-black group justify-between p-16"
-											>
-												<span class="z-10">детальніше</span>
-												<svg
-													class="size-24 fill-black lg:group-hover:fill-white"
-												>
-													<use href="#btn-arrow-icon"></use>
-												</svg>
-											</button>
-										</div>
-									</div>
-								</div>
-								<div
-									class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear mb-16 last:mb-0"
-								>
-									<div
-										class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+									<p class="mb-12">
+										Навчаємо волонтерів та студентів ПТУ професійним будівельним
+										навичкам для якісного виконання робіт
+									</p>
+									<a
+										href="#"
+										class="sm:w-[2.4rem] w-full h-[.48rem] btn outline-black hover-black group gap-8 p-16"
 									>
-										<img
-											class="object-cover"
-											src="@img/Rectangle 12760.png"
-											alt="img"
-										/>
+										<span class="z-10">детальніше</span>
+										<svg class="size-16 fill-black lg:group-hover:fill-white">
+											<use href="#btn-arrow-icon"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div
+								class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear"
+							>
+								<div
+									class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+								>
+									<img class="object-cover" src="@img/ubout_1.png" alt="img" />
+								</div>
+
+								<div>
+									<div class="flex lg:block gap-12 items-center">
+										<div
+											class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
+										>
+											04
+										</div>
+										<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
+											Гуманітарна допомога
+										</h2>
 									</div>
 
-									<div>
-										<div class="flex lg:block gap-12 items-center">
-											<div
-												class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
-											>
-												02
-											</div>
-											<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
-												Зігрій
-											</h2>
-										</div>
-										<div class="lg:flex gap-32 items-end">
-											<p class="lg:mb-0 mb-12">
-												Ми допомагаємо родинам залишатися зі світлом, теплом та
-												зв’язком у найскрутніші часи
-											</p>
-											<button
-												class="min-w-[2.4rem] w-full sm:w-auto h-[.48rem] btn outline-black hover-black group justify-between p-16"
-											>
-												<span class="z-10">детальніше</span>
-												<svg
-													class="size-24 fill-black lg:group-hover:fill-white"
-												>
-													<use href="#btn-arrow-icon"></use>
-												</svg>
-											</button>
-										</div>
-									</div>
-								</div>
-								<div
-									class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear mb-16 last:mb-0"
-								>
-									<div
-										class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
+									<p class="mb-12">
+										Навчаємо волонтерів та студентів ПТУ професійним будівельним
+										навичкам для якісного виконання робіт
+									</p>
+									<a
+										href="#"
+										class="sm:w-[2.4rem] w-full h-[.48rem] btn outline-black hover-black group gap-8 p-16"
 									>
-										<img
-											class="object-cover"
-											src="@img/ubout_1.png"
-											alt="img"
-										/>
-									</div>
-
-									<div>
-										<div class="flex lg:block gap-12 items-center">
-											<div
-												class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
-											>
-												03
-											</div>
-											<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
-												Добробат освіта
-											</h2>
-										</div>
-										<div class="lg:flex gap-32 items-end">
-											<p class="lg:mb-0 mb-12">
-												Навчаємо волонтерів та студентів ПТУ професійним
-												будівельним навичкам для якісного виконання робіт
-											</p>
-											<button
-												class="min-w-[2.4rem] w-full sm:w-auto h-[.48rem] btn outline-black hover-black group justify-between p-16"
-											>
-												<span class="z-10">детальніше</span>
-												<svg
-													class="size-24 fill-black lg:group-hover:fill-white"
-												>
-													<use href="#btn-arrow-icon"></use>
-												</svg>
-											</button>
-										</div>
-									</div>
+										<span class="z-10">детальніше</span>
+										<svg class="size-16 fill-black lg:group-hover:fill-white">
+											<use href="#btn-arrow-icon"></use>
+										</svg>
+									</a>
 								</div>
-								<div
-									class="sm:flex p-16 gap-24 bg-white rounded-24 lg:hover:bg-yellow duration-300 transition-colors ease-linear mb-16 last:mb-0"
-								>
-									<div
-										class="image w-full mb-12 sm:mb-0 sm:w-[2.75rem] min-h-[1.95rem] rounded-24 overflow-hidden shrink-0"
-									>
-										<img
-											class="object-cover"
-											src="@img/ubout_1.png"
-											alt="img"
-										/>
-									</div>
-
-									<div>
-										<div class="flex lg:block gap-12 items-center">
-											<div
-												class="h1 bg-light-gray rounded-24 size-[.78rem] flex-center text-yellow font-bold mb-12"
-											>
-												04
-											</div>
-											<h2 class="h4 font-semibold mb-12 max-sm:!text-[.24rem]">
-												Гуманітарна допомога
-											</h2>
-										</div>
-										<div class="lg:flex gap-32 items-end">
-											<p class="lg:mb-0 mb-12">
-												Навчаємо волонтерів та студентів ПТУ професійним
-												будівельним навичкам для якісного виконання робіт
-											</p>
-											<button
-												class="min-w-[2.4rem] w-full sm:w-auto h-[.48rem] btn outline-black hover-black group justify-between p-16"
-											>
-												<span class="z-10">детальніше</span>
-												<svg
-													class="size-24 fill-black lg:group-hover:fill-white"
-												>
-													<use href="#btn-arrow-icon"></use>
-												</svg>
-											</button>
-										</div>
-									</div>
-								</div>
-								<button class="btn fill_yellow hover-black mx-auto p-16 group">
-									<span class="z-10 mr-16">показати ще</span>
-									<svg
-										class="size-24 fill-black lg:group-hover:!fill-white rotate-[135deg]"
-									>
-										<use href="#btn-arrow-icon"></use>
-									</svg>
-								</button>
 							</div>
 						</div>
+						<button class="btn fill_yellow hover-black mx-auto p-16 group">
+							<span class="z-10 mr-16">показати ще</span>
+							<svg
+								class="size-24 fill-black lg:group-hover:!fill-white rotate-[135deg]"
+							>
+								<use href="#btn-arrow-icon"></use>
+							</svg>
+						</button>
 					</div>
 				</section>
 
@@ -643,6 +668,7 @@
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_modal.htm',{}) @@include('html/_svg.htm',{})
-		@@include('html/_js.htm',{})
+		<script src="js/app.min.js"></script>
+		<script src="js/projects.min.js"></script>
 	</body>
 </html>

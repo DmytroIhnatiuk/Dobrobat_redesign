@@ -28,3 +28,14 @@
 		@apply lg:hover:text-black lg:hover:before:bg-yellow;
 	}
 }
+@layer utilities {
+	.box-shadow {
+		box-shadow: 0 10px 10px 0 rgba(49, 45, 43, 0.15);
+	}
+	.text-clamp_2 {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		-webkit-line-clamp: 2;
+	}
+}
