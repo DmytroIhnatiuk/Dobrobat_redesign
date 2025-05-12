@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b0ab56a5-d3c1-418c-829e-6990ac9d4b8a" name="DOBROBAT_NEW" url="https://forestgreen-pigeon-204953.hostingersite.com/">
+        <fileTransfer rootFolder="/home/u157516331/domains/forestgreen-pigeon-204953.hostingersite.com/public_html/wp-content/themes" accessType="SFTP" host="46.17.175.127" port="65002" sshConfigId="aa51c6d2-894f-4c41-af04-06f197b01893" sshConfig="u157516331@46.17.175.127:65002 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
