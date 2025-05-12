@@ -2,6 +2,7 @@
 module.exports = {
 	content: ['./src/**/*.{html,htm,js}'],
 	theme: {
+
 		container: {
 			padding: 'var(--container-gap)',
 			center: true,
