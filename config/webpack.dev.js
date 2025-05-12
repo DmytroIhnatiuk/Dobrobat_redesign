@@ -1,7 +1,7 @@
-import fs from 'fs'
-import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
+import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace'
+import fs from 'fs'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 import * as path from 'path'
 
@@ -45,6 +45,7 @@ const config = {
 		app: `${paths.src}/js/app.js`,
 		team: `${paths.src}/js/pages/team.js`,
 		projects: `${paths.src}/js/pages/projects.js`,
+		suggestion: `${paths.src}/js/pages/suggestion.js`,
 	},
 
 	output: {
@@ -60,11 +61,11 @@ const config = {
 		port: 'auto',
 		hot: true,
 		host: 'local-ip', // localhost
-		//В режимі розробника папка
+		// В режимі розробника папка
 		// результатом (dist) буде створюватися на диску)
-		//devMiddleware: {
-		//	writeToDisk: true,
-		//},
+		devMiddleware: {
+			writeToDisk: true,
+		},
 		watchFiles: [
 			`${paths.src}/**/*.html`,
 			`${paths.src}/**/*.pug`,

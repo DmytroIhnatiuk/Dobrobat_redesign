@@ -1,5 +1,5 @@
 import Swiper from 'swiper'
-import { Autoplay, Navigation, Thumbs } from 'swiper/modules'
+import { Autoplay, EffectFade, Navigation, Thumbs } from 'swiper/modules'
 import { getElement, getElements } from '../core/index.js'
 
 function aboutUsSliderNav() {
@@ -152,11 +152,45 @@ function partnersSlider() {
 	})
 }
 
+let sliderThumbs
+
+function suggestionsSliderNav() {
+	const el = document.querySelector('[data-swiper="suggestionsSliderNav"]')
+	if (!el) return
+
+	sliderThumbs = new Swiper(el, {
+		modules: [Thumbs],
+		slidesPerView: 2,
+		spaceBetween: 16,
+		watchSlidesProgress: true,
+	})
+}
+
+function suggestionsSlider() {
+	const el = document.querySelector('[data-swiper="suggestionsSlider"]')
+	if (!el) return
+
+	new Swiper(el, {
+		modules: [Thumbs, EffectFade],
+		slidesPerView: 1,
+		autoHeight: true,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true,
+		},
+		thumbs: {
+			swiper: sliderThumbs,
+		},
+	})
+}
+
 export {
 	aboutUsSlider,
 	aboutUsSliderNav,
 	newsSlider,
-	volunteersSlider,
 	ourTeamSlider,
 	partnersSlider,
+	suggestionsSlider,
+	suggestionsSliderNav,
+	volunteersSlider,
 }
