@@ -86,3 +86,45 @@
 		z-index: 50;
 	}
 }
+
+.dropdown {
+	.dropdown__content {
+		visibility: hidden;
+	}
+	@media all and (min-width: 1024px) {
+		&:hover {
+			.dropdown__btn {
+				.dropdown__icon {
+					transform: scale(1, -1);
+				}
+			}
+
+			.dropdown__content {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	&.active {
+		.dropdown__btn {
+			.dropdown__icon {
+				svg {
+					transform: scale(1, -1);
+				}
+			}
+		}
+
+		.dropdown__content {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&__item {
+		&.active {
+			pointer-events: none;
+			opacity: 0.3;
+		}
+	}
+}

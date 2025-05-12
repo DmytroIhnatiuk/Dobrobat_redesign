@@ -63,6 +63,8 @@ const config = {
 	entry: {
 		app: `${paths.src}/js/app.js`,
 		team: `${paths.src}/js/pages/team.js`,
+		projects: `${paths.src}/js/pages/projects.js`,
+		suggestion: `${paths.src}/js/pages/suggestion.js`,
 		home: `${paths.src}/js/pages/home.js`,
 	},
 
