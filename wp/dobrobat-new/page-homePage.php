@@ -2,7 +2,6 @@
 <?php
 get_header();
 global $IS_NEW;
-var_dump($IS_NEW);
 ?>
 <?php if ($IS_NEW): ?>
     <main>
