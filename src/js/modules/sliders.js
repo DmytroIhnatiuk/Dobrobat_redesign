@@ -161,8 +161,13 @@ function suggestionsSliderNav() {
 	sliderThumbs = new Swiper(el, {
 		modules: [Thumbs],
 		slidesPerView: 2,
-		spaceBetween: 16,
+		spaceBetween: 8,
 		watchSlidesProgress: true,
+		breakpoints: {
+			640: {
+				spaceBetween: 16,
+			},
+		},
 	})
 }
 

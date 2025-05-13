@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ua">
 	@@include('html/_head.htm',{ "title":"suggestions"})
-	<body class="body font-body suggestion">
+	<body class="body font-body suggestion relative">
 		<div class="page-container">
 			@@include('html/_header.htm',{})
 
@@ -58,7 +58,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="grid gap-24 grid-cols-1 lg:grid-cols-6">
+						<div class="grid gap-y-12 gap-x-24 grid-cols-1 lg:grid-cols-6">
 							<div>
 								<div class="accordion">
 									<div class="accordion-header">
@@ -182,14 +182,14 @@
 											<div class="swiper-wrapper">
 												<div class="swiper-slide max-w-max">
 													<div
-														class="border border-solid border-black py-12 px-24 rounded-24 w-[1rem] sm:w-[2.1rem] flex-center bg-transparent lg:hover:bg-black lg:hover:text-white transition-colors duration-300 ease-linear uppercase cursor-pointer"
+														class="border border-solid border-black py-12 px-24 rounded-24 w-[1.1rem] sm:w-[2.1rem] flex-center bg-transparent lg:hover:bg-black lg:hover:text-white transition-colors duration-300 ease-linear uppercase cursor-pointer"
 													>
 														Мапа
 													</div>
 												</div>
 												<div class="swiper-slide max-w-max">
 													<div
-														class="border border-solid border-black py-12 px-24 rounded-24 w-[1rem] sm:w-[2.1rem] flex-center bg-transparent lg:hover:bg-black lg:hover:text-white transition-colors duration-300 ease-linear uppercase cursor-pointer"
+														class="border border-solid border-black py-12 px-24 rounded-24 w-[1.1rem] sm:w-[2.1rem] flex-center bg-transparent lg:hover:bg-black lg:hover:text-white transition-colors duration-300 ease-linear uppercase cursor-pointer"
 													>
 														список
 													</div>
@@ -212,7 +212,7 @@
 										</button>
 									</div>
 									<button
-										class="size-[.48rem] flex-center border border-solid border-gray rounded mr-16 lg:hidden flex-shrink-0"
+										class="size-[.48rem] flex-center border border-solid border-gray rounded mr-8 lg:hidden flex-shrink-0"
 									>
 										<svg class="size-24 stroke-gray z-10 fill-none">
 											<use href="#search-icon"></use>
@@ -554,6 +554,78 @@
 					</div>
 				</section>
 			</main>
+			<!-- TODO для коректної роботи при виклику попапу на body навішати клас active -->
+			<!-- <div
+				class="absolute h-[100vh] inset-0 z-[60] flex-center px-16 sm:px-32"
+			>
+				<div
+					class="lg:w-[9rem] bg-white rounded-24 p-16 lg:pl-50 lg:pt-50 lg:pr-32 lg:pb-32 relative"
+				>
+					<div
+						class="border border-solid border-black px-8 py-4 rounded-16 flex gap-6 uppercase items-center w-max bg-white mb-16 text-s font-bold"
+					>
+						<div class="size-12 rounded bg-[#FFC700]"></div>
+						Управління
+					</div>
+					<div
+						class="text-[.24rem] font-semibold flex flex-col sm:flex-row gap-16 sm:gap-24 mb-16"
+					>
+						<div class="flex gap-16 items-center">
+							<span
+								class="rounded border border-solid border-black flex-shrink-0 size-32 flex-center"
+							>
+								<svg class="size-24 stroke-black fill-none">
+									<use href="#name-icon"></use>
+								</svg>
+							</span>
+							Петров Іван
+						</div>
+						<div class="flex gap-16 items-center">
+							<span
+								class="rounded border border-solid border-black flex-shrink-0 size-32 flex-center"
+							>
+								<svg class="size-20 stroke-black fill-none">
+									<use href="#location-icon"></use>
+								</svg> </span
+							>м. Чернігів
+						</div>
+					</div>
+					<p class="font-medium mb-16">
+						Тренінги (в тому числі онлайн), розповсюдження інформації, тощо з
+						доцільності сортування сміття серед населення, в Тренінги (в тому
+						числі онлайн), розповсюдження інформації, тощо з доцільності
+						сортування сміття серед населення, в серед населення, в Тренінги (в
+						тому числі онлайн), розповсюдження інформації, тощо з доцільності
+						сортування сміття серед населення, в
+					</p>
+					<div class="flex flex-col sm:flex-row gap-y-12 sm:items-center">
+						<a
+							class="text-l sm:mr-24 font-semibold lg:hover:text-yellow transition-colors duration-300"
+							href="mailto:example@gmail.con"
+							>example@gmail.con</a
+						>
+
+						<a
+							class="text-l font-semibold lg:hover:text-yellow transition-colors duration-300"
+							href="tel:+380000000000"
+							>+3 80 00 000 00 00</a
+						>
+
+						<button
+							href="#"
+							class="sm:w-[2.4rem] w-full h-[.48rem] border-[2px] border-solid border-black rounded-30 gap-8 p-16 uppercase flex-center bg-transparent hover:bg-black hover:text-white hover:fill-white transition-colors duration-300 ease-linear ml-auto"
+						>
+							назад
+							<svg class="size-16 rotate-90">
+								<use href="#btn-arrow-icon"></use>
+							</svg>
+						</button>
+					</div>
+					<button
+						class="rounded border border-solid border-black size-32 absolute top-24 right-24 before:w-24 before:h-2 before:bg-black before:absolute before:top-1/2 before:right-1/2 before:translate-x-1/2 before:-translate-y-1/2 before:rotate-45 after:w-24 after:h-2 after:bg-black after:absolute after:top-1/2 after:right-1/2 after:translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 lg:hover:bg-black bg-white transition-colors duration-300 lg:hover:before:bg-white lg:hover:after:bg-white before:transition-colors before:duration-300 after:transition-colors after:duration-300"
+					></button>
+				</div>
+			</div> -->
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_modal.htm',{}) @@include('html/_svg.htm',{})
