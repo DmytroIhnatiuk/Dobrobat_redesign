@@ -1,7 +1,10 @@
-<?php /* Template Name: Home page */ ?>
+<?php /* Template Name: Home page work */ ?>
 <?php
 get_header();
+global $IS_NEW;
+var_dump($IS_NEW);
 ?>
+<?php if ($IS_NEW): ?>
     <main>
         <section
                 class="mt-[calc(var(--header-height)+.28rem)] text-white font-semibold mb-24 overflow-hidden"
@@ -573,10 +576,146 @@ get_header();
         <?= get_template_part('template-parts/new/partners'); ?>
         <?= get_template_part('template-parts/new/team'); ?>
     </main>
-<?php if (1 !== 1): ?>
+<?php else: ?>
     <main class="main__page">
+    <section class="section section__main-screen pos-r py-40">
+        <div class="main-screen container">
+            <div class="main-screen__content t-center ">
+                <h1 class="fz-54 f-600">
+                    <?php pll_e('Добробат - це добровольчий будівельний батальйон.'); ?>
+                </h1>
+                <div class="main-screen__text fz-24">
+                    <?php pll_e('Долучайся до відбудови нашої країни, зроби внесок у відродження України'); ?>
+
+                </div>
+                <div class="main-screen__btns d-flex">
+
+                    <a href="https://telegram.me/dobrobat_in_ua_bot?start" target="blank" class="btn btn_ac">
+                        <?php pll_e('приєднатися ДО ДОБРОБАТУ'); ?>
+                    </a>
+                    <a href="/objects/" class="btn">
+                        <?php pll_e("Зруйновані об'єкти"); ?>
+                    </a>
+
+                </div>
+            </div>
 
 
+        </div>
+    </section>
+
+    <div class="main-screen__video pos-r ">
+        <div class="container">
+            <div class="wrapper">
+                <div class="video">
+
+                    <iframe id="player" frameborder="0" allowfullscreen="1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            title="<?php pll_e('Про проєкт - Добробат'); ?>" width="640" height="360"
+                            src="https://www.youtube.com/embed/9r2aeFew6aE?autoplay=1&amp;loop&amp;=1&amp;controls=2&amp;color=white&amp;modestbranding=1&amp;mute=1&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost%3A3006&amp;widgetid=1"
+                    ></iframe>
+
+                    <!--                    <iframe src="https://player.vimeo.com/video/710012411?h=81938e745f" frameborder="0"-->
+                    <!--                            webkitallowfullscreen mozallowfullscreen allowfullscreen-->
+                    <!--                            title="   -->
+                    <?php //pll_e('Про проєкт - Добробат'); ?><!--"></iframe>-->
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <section id="about" class="section section__about section__container py-40">
+        <div class="about">
+            <div class="about__content d-flex">
+                <h2 class="fz-44">
+                    <?php pll_e('Про проєкт «Добробат»'); ?>
+                </h2>
+                <div class="about__text fz-24">
+                    <?php the_field('text_1'); ?>
+                </div>
+                <div class="about__text fz-18">
+                    <?php the_field('text_2'); ?>
+                </div>
+                <div class="swiper-about__nav d-flex">
+                    <div class="controls d-flex">
+                        <button class="swiper-about__prev">
+                            <svg class="icon arrow prev">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="swiper-about__next">
+                            <svg class="icon arrow">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="counter ">
+                        <span class="counter__current f-700">1</span>
+                        <span class="counter__total"></span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="about__slider">
+
+
+                <div class="swiper swiper-about">
+                    <?php if (have_rows('gallery')): ?>
+                        <div class="swiper-wrapper">
+                            <?php while (have_rows('gallery')): the_row();
+                                $photo = get_sub_field('photo');
+                                ?>
+                                <div class="swiper-slide">
+                                    <?= wp_get_attachment_image($photo, 'dobrobat_600', false, array('width' => 'dobrobat_600', 'height' => 'dobrobat_600'));
+                                    ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                    <?php endif; ?>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="about__info">
+            <div class="text">
+                <div class="fz-18 ">
+                    <?php the_field('text_3'); ?>
+                </div>
+                <?php
+                $isEn = get_locale(); ?>
+                <a href="<?php if ($isEn !== 'en') : ?>https://www.dobrobat.in.ua/dogovir/ <?php else : ?> https://www.dobrobat.in.ua/en/agreement/ <?php endif; ?>"
+                   class="btn btn_ac"> <?php pll_e("Договір про провадження волонтерської діяльності"); ?></a>
+
+            </div>
+            <?php if (have_rows('statistics')): ?>
+                <div class="about__statistics">
+                    <?php while (have_rows('statistics')): the_row();
+                        $number = get_sub_field('number');
+                        $description = get_sub_field('description');
+                        ?>
+                        <div class="about__item d-flex  f-600 --align-center">
+                            <div class="title fz-36 t-ac">
+                                <?php echo $number; ?>
+                            </div>
+                            <div class="fz-18">
+                                <?php echo $description; ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </section>
     <section class="section section__centers py-40 centers">
         <div class="container">
             <div class="row">
@@ -639,6 +778,87 @@ get_header();
     </section>
 
 
+    <section class="section section__news py-40">
+        <div class="container">
+            <div class="d-flex --align-center --just-between --wrap">
+                <h2 class="fz-52 t-center">
+                    <?php pll_e('Новини проєкту'); ?>
+                </h2>
+
+                <a href="<?php $isEn = get_locale();
+                if ($isEn !== 'en') : ?>/news
+                    <?php else : ?>/project-news<?php endif; ?>" class="btn btn_outline t-upper ">
+                    <span>
+                        <?php pll_e('БІЛЬШЕ НОВИН'); ?>
+                        </span> </a>
+            </div>
+            <div class="main-screen__news">
+                <div class="swiper-wrapper">
+                    <?php
+                    $args = array(
+                        'post_type' => array('news'),
+                        'post_status' => array('publish'),
+                        'posts_per_page' => 10,
+
+                        'order' => 'DESC',
+                        'orderby' => 'date',
+                        // 'cat' => 1,
+                    );
+                    if (get_locale() == 'en') {
+                        $args['lang'] = 'en';
+                    }
+                    $posts = query_posts($args);
+
+
+                    foreach ($posts as $index => $post) {
+                        $title = get_the_title($post->ID);
+                        $date = get_the_date('d.m.y', $post->ID);
+                        $mainImg = wp_get_attachment_image(get_field('main-img', $post->ID), 'dobrobat_news_thumb', false, array('width' => 'dobrobat_news_thumb', 'height' => 'dobrobat_news_thumb'));
+                        $url = get_permalink($post->ID);
+                        ?>
+
+                        <div class="swiper-slide">
+                            <a href="<?php echo $url; ?>" class="main-screen__news-item d-flex --dir-col">
+                                <div class="image">
+                                    <?php echo $mainImg ?>
+                                </div>
+                                <div class="text fz-18 f-600">
+                                    <?php echo truncateString($title, 90); ?>
+                                </div>
+                                <div class="main-screen__news-item__footer d-flex --just-between">
+                                    <span class="fz-16"><?= pll_e('Додано'); ?><?php echo $date ?></span><span
+                                            class="t-upper fz-14 f-600"><?= pll_e('Переглянути'); ?></span>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    <?php }
+
+
+                    ?>
+                </div>
+                <div class="swiper-news__nav d-flex --just-end">
+                    <div class="controls d-flex">
+                        <button class="swiper-news__prev">
+                            <svg class="icon arrow prev">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="swiper-news__next">
+                            <svg class="icon arrow">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="counter ">
+                        <span class="counter__current f-700">1</span>
+                        <span class="counter__total">10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <?php if (get_locale() !== 'en'): ?>
         <section class="section section__history py-40">
             <div class="container">
@@ -711,11 +931,68 @@ get_header();
             </div>
         </section>
     <?php endif; ?>
+    <?php if (1 !== 1): ?>
+        <!--    <section class="section section__restorations-academy py-40">-->
+        <!--        <div class="container">-->
+        <!--            <div class="academy__section d-flex bdr-12">-->
+        <!--                <h2>--><?php //pll_e('Збираємо на відновлення Хортицької національної навчально-реабілітаційної
+//                    академії') ?>
+        <!--                </h2>-->
+        <!--                <div>-->
+        <!--                    <div class="fz-24 mb-2">-->
+        <!--                        --><?php //pll_e('Друзі, «Добробат» відкриває збір коштів на відновлення КЗВО «Хортицька національна
+//                        навчально-реабілітаційна академія», де навчалося 337 дітей та 1113 студентів.') ?>
+        <!---->
+        <!--                    </div>-->
+        <!---->
+        <!--                    <div class="fz-24 mb-3">-->
+        <!--                        --><?php //pll_e('Для відновлення будівлі та її приміщень необхідно зібрати') ?><!--</div>-->
+        <!--                    <div class="fz-54 f-600 mb-3">5 000 000.00 ₴</div>-->
+        <!---->
+        <!--                    --><?php //$isEn = get_locale();
+//                    $link = 'https://www.dobrobat.in.ua/reconstruction-academy';
+//                    if ($isEn == 'en') {
+//                        $link = "https://www.dobrobat.in.ua/en/reconstruction-academy-en/";
+//                    } ?>
+        <!--                    <a href="--><? //= $link; ?><!--" class="btn btn_black "-->
+        <!--                    ><span class="fz-24">-->
+        <!--                        --><?php //pll_e('ДІЗНАТИСЯ  БІЛЬШЕ') ?><!--</span></a>-->
+        <!--                </div>-->
+        <!---->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </section>-->
+    <?php endif; ?>
 
     <?php
     if (pll_current_language() == 'ua') : ?>
 
-
+        <!--    <section class="section section__aid py-40">-->
+        <!--        <div class="container">-->
+        <!--            <div class="aid  d-flex">-->
+        <!--                <h2 class="fz-52">-->
+        <!--                    --><?php //pll_e('Стрічка взаємодопомоги'); ?>
+        <!---->
+        <!--                </h2>-->
+        <!--                <div class="aid__descr">-->
+        <!--                    <p class="fz-18">-->
+        <!--                        --><?php //pll_e('Щоб прискорити роботу відбудови, ми створили живу стрічку взаємодопомоги. Де ті хто постраждав, можуть
+//            вказати інформацію про пошкодження, та що саме треба полагодити.'); ?><!--</p>-->
+        <!--                    <p class="fz-18">--><?php //pll_e('А ті хто може швидко допомогти, самоорганізуватись, зв’язатись з користувачем, якому
+//            потрібна допомога, та прибути на відновлювальні роботи.'); ?><!--</p>-->
+        <!--                    <div class="aid__btns d-flex">-->
+        <!--                        <a href="#form" class="btn btn_ac scrolTo"><span class="fz-18" data-askHelp>-->
+        <!--                --><?php //pll_e('РОЗМІСТИТИ ОГОЛОШЕННЯ'); ?>
+        <!--              </span></a>-->
+        <!--                        <a href="/advertisement/" class="btn "><span class="fz-18">-->
+        <!--                --><?php //pll_e('УСІ ОГОЛОШЕННЯ'); ?>
+        <!---->
+        <!--              </span></a>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </section>-->
         <section class="section section__aid py-40">
             <div class="container">
                 <div class="aid  d-flex">
@@ -724,8 +1001,7 @@ get_header();
                     </h2>
                     <div class="aid__descr">
                         <p class="fz-24">
-                            «Добробат» спільно з компанією Hilti Україна реалізовує ініціативу підтримки бригад та
-                            компаній,
+                            «Добробат» спільно з компанією Hilti Україна реалізовує ініціативу підтримки бригад та компаній,
                             які займаються відбудовою зруйнованих будівель</p>
                         <div class="assistance__logos d-flex">
                             <a href="<?php echo get_home_url(); ?>">
@@ -912,8 +1188,7 @@ get_header();
 
 
                         </a>
-                        <a href="https://www.irex.org/project/ukraine-rapid-response-fund/" class=" image "
-                           target="_blank">
+                        <a href="https://www.irex.org/project/ukraine-rapid-response-fund/" class=" image " target="_blank">
                             <img src="https://b2903718.smushcdn.com/2903718/wp-content/themes/dobrobat-1/assets/borodianka/img//irex/logo_urrf.webp?lossy=1&amp;strip=1&amp;webp=1"
                                  alt="IREX" class="object-contain"
                                  srcset="https://b2903718.smushcdn.com/2903718/wp-content/themes/dobrobat-1/assets/borodianka/img//irex/logo_urrf.webp?lossy=1&amp;strip=1&amp;webp=1 494w,https://b2903718.smushcdn.com/2903718/wp-content/themes/dobrobat-1/assets/borodianka/img//irex/logo_urrf.webp?size=128x52&amp;lossy=1&amp;strip=1&amp;webp=1 128w,https://b2903718.smushcdn.com/2903718/wp-content/themes/dobrobat-1/assets/borodianka/img//irex/logo_urrf.webp?size=256x104&amp;lossy=1&amp;strip=1&amp;webp=1 256w,https://b2903718.smushcdn.com/2903718/wp-content/themes/dobrobat-1/assets/borodianka/img//irex/logo_urrf.webp?size=384x155&amp;lossy=1&amp;strip=1&amp;webp=1 384w"
@@ -1046,8 +1321,7 @@ get_header();
                                     <label class="fz-14">
                                         <?php pll_e("Напишіть, що саме ви можете надати"); ?>
                                     </label>
-                                    <textarea name="your-info" cols="40" rows="10"
-                                              class="wpcf7-form-control wpcf7-textarea"
+                                    <textarea name="your-info" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea"
                                               aria-invalid="false"
                                               placeholder=" <?php pll_e("Наприклад: можу надати бетон, дошку, вікна, трактор, обладнання"); ?>"></textarea>
                                     <div class="form__message fz-16"></div>
@@ -1056,8 +1330,7 @@ get_header();
                                 <div class="form__item form__checkbox">
 
                                     <label class="fz-14 d-flex">
-                                        <input type="checkbox" name="policy"
-                                               value="Даю згоду на обробку персональних даних"
+                                        <input type="checkbox" name="policy" value="Даю згоду на обробку персональних даних"
                                                checked="checked">
                                         <span class="check">
                       <svg class="icon">
@@ -1187,8 +1460,7 @@ get_header();
                                     <label class="fz-14">
                                         Напишіть, які роботи потрібні
                                     </label>
-                                    <textarea name="your-info" cols="40" rows="10"
-                                              class="wpcf7-form-control wpcf7-textarea"
+                                    <textarea name="your-info" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea"
                                               aria-invalid="false"
                                               placeholder="Наприклад: треба вставити вікно, полагодити дах у приватному будинку у наслiдок артобстрілу..."></textarea>
                                     <div class="form__message fz-16"></div>
@@ -1202,15 +1474,13 @@ get_header();
                                         <p>
                                             Застерігаємо всіх, хто залишає запит про допомогу на дошці оголошень щодо
                                             відновлення житла чи
-                                            інших нежитлових об’єктів. Нагадуємо, на запит може відгукнутися будь-хто з
-                                            тих,
+                                            інших нежитлових об’єктів. Нагадуємо, на запит може відгукнутися будь-хто з тих,
                                             хто його
                                             бачить.<span data-attention="show">.. <u>Читати повністю</u></span>
                                         </p>
                                         <p>Варто пам’ятати, добровольчий будівельний батальйон «Добробат» — волонтерська
                                             організація. Тож,
-                                            якщо залишивши запит про допомогу відгукуються ті, хто вимагає грошей за
-                                            свою
+                                            якщо залишивши запит про допомогу відгукуються ті, хто вимагає грошей за свою
                                             роботу або
                                             говорить, що ви маєте особисто їм виділити кошти на будматеріали, інвентар і
                                             подібне — будьте
@@ -1225,8 +1495,7 @@ get_header();
                                 <div class="form__item form__checkbox">
 
                                     <label class="fz-14 d-flex">
-                                        <input type="checkbox" name="policy"
-                                               value="Даю згоду на обробку персональних даних"
+                                        <input type="checkbox" name="policy" value="Даю згоду на обробку персональних даних"
                                                checked="checked">
                                         <span class="check">
                       <svg class="icon">
@@ -1255,6 +1524,8 @@ get_header();
         </section>
 
     <?php endif; ?>
+
+
 
 
 <?php endif; ?>

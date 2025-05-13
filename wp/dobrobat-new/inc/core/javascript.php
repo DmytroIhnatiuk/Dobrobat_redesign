@@ -20,7 +20,6 @@ if (!function_exists('dobrobat_scripts_setup')) :
                 wp_enqueue_script('zigrii-scripts', get_template_directory_uri() . '/assets/zigrii/js/zigrii.min.js', array(), null, true);
             else:
                 wp_enqueue_script('dobrobat-scripts', get_template_directory_uri() . '/js/main.min.js', array(), null, true);
-
             endif;
         endif;
 //        if (is_singular('services')) {
