@@ -173,6 +173,7 @@ function suggestionsSlider() {
 	new Swiper(el, {
 		modules: [Thumbs, EffectFade],
 		slidesPerView: 1,
+		speed: 800,
 		autoHeight: true,
 		effect: 'fade',
 		fadeEffect: {

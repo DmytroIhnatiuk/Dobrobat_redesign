@@ -4,3 +4,23 @@
 @import 'global';
 @import 'helpers';
 @import 'components';
+
+.suggestion {
+	.accordion {
+		button {
+			@media all and (max-width: 1023.9px) {
+				border-color: var(--white);
+			}
+
+			&.active {
+				border-color: var(--black);
+				pointer-events: none;
+				@media all and (min-width: 1024px) {
+					background: var(--white);
+					border-color: var(--white);
+					box-shadow: 0 10px 10px 0 rgba(49, 45, 43, 0.15);
+				}
+			}
+		}
+	}
+}

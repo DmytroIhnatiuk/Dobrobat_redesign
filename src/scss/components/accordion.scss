@@ -1,0 +1,32 @@
+.accordion {
+	position: relative;
+	z-index: 60;
+	box-shadow: 0 10px 10px 0 transparent;
+	&-header {
+		cursor: pointer;
+
+		&.active {
+			svg {
+				transform: scale(1, -1);
+			}
+		}
+	}
+	&-content {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		left: 0;
+		max-height: 0;
+		background: var(--white);
+		overflow-y: hidden;
+		transition: max-height 0.3s ease-out;
+		box-shadow: 0 10px 10px 0 rgba(49, 45, 43, 0.15);
+
+		@media all and (min-width: 1024px) {
+			max-height: max-content;
+			position: relative;
+			background: transparent;
+			box-shadow: none;
+		}
+	}
+}
