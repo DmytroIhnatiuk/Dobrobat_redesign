@@ -626,6 +626,222 @@
 					></button>
 				</div>
 			</div> -->
+			<!-- TODO для коректної роботи при виклику попапу на body навішати клас active -->
+			<!-- <div
+				class="absolute top-[calc(var(--header-height)+.32rem)] right-0 sm:left-100 left-16 max-h-[calc(100vh-(var(--header-height)+.64rem))] rounded-l-24 bg-bg box-shadow z-[90] px-16 py-24 sm:py-[.46rem] pr-[var(--container-gap)] h-full sm:pl-[.64rem]"
+			>
+				<div class="max-h-full overflow-x-scroll">
+					<div
+						class="flex flex-col sm:flex-row gap-4 sm:gap-32 sm:items-center mb-24"
+					>
+						<h2 class="sm:text-[.4rem] text-[.24rem] font-extrabold text-left">
+							Всі пропозиції м.Суми
+						</h2>
+						<span class="text-l">( 10 000 )</span>
+					</div>
+					<div
+						class="flex overflow-x-scroll gap-8 min-w-[calc(100%+var(--container-gap))]"
+					>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-center items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 gap-16 flex-shrink-0 max-w-max"
+						>
+							все
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 active flex-shrink-0 max-w-max"
+						>
+							ТПВ
+							<span class="size-24 rounded bg-[#B97801] flex-shrink-0"> </span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							Управління
+							<span class="size-24 rounded bg-yellow flex-shrink-0"> </span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							Освіта
+							<span class="size-24 rounded bg-[#A17FCE] flex-shrink-0"> </span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							Компост
+							<span class="size-24 rounded bg-[#45AB84] flex-shrink-0"> </span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							Альтернативні джерела енергії
+							<span class="size-24 rounded bg-[#59B6E4] flex-shrink-0 block">
+							</span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							Зелені зони
+							<span class="size-24 rounded bg-[#79AB5A] flex-shrink-0"> </span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							Забудова
+							<span class="size-24 rounded bg-[#EB8636] flex-shrink-0"> </span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							Повітря
+							<span class="size-24 rounded bg-[#A4A4A4] flex-shrink-0"> </span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							Енерго ефективність
+							<span class="size-24 rounded bg-[#4945A3] flex-shrink-0"> </span>
+						</button>
+						<button
+							class="lg:w-full h-[.48rem] mb-8 last:mb-24 border border-solid border-black bg-transparent rounded-30 text-s flex justify-between items-center px-16 py-8 uppercase lg:hover:bg-white lg:hover:border-white transition duration-300 ease-linear shadow-lg shadow-transparent lg:hover:shadow-zinc-300 text-left gap-16 flex-shrink-0 max-w-max"
+						>
+							вода
+							<span class="size-24 rounded bg-[#4572A3] flex-shrink-0"> </span>
+						</button>
+					</div>
+
+					<div class="grid lg:grid-cols-2 gap-x-24 gap-y-16 sm:mb-32 mb-16">
+						<div
+							class="border border-solid border-black sm:p-24 px-16 pt-16 pb-24 rounded-24 bg-white lg:hover:bg-yellow lg:hover:border-yellow transition-colors duration-300 ease-linear group"
+						>
+							<div
+								class="border border-solid border-black px-8 py-4 rounded-16 flex gap-6 uppercase items-center w-max bg-white mb-16 text-s font-bold"
+							>
+								<div class="size-12 rounded bg-[#FFC700]"></div>
+								Управління
+							</div>
+							<div class="h4">Петров Іван, example@gmail.com</div>
+							<span class="font-medium block mb-8">м.Чернігів</span>
+							<p class="font-medium sm:line-clamp-2 line-clamp-4 mb-16">
+								Тренінги (в тому числі онлайн), розповсюдження інформації, тощо
+								з доцільності сортування сміття серед населення, в Тренінги (в
+								тому числі онлайн), розповсюдження інформації, тощо з
+								доцільності сортування сміття серед населення, в серед
+								населення, в Тренінги (в тому числі онлайн), розповсюдження
+								інформації, тощо з доцільності сортування сміття серед
+								населення, в
+							</p>
+							<button
+								href="#"
+								class="sm:w-[2.4rem] w-full h-[.48rem] border-[2px] border-solid border-black rounded-30 gap-8 p-16 uppercase flex-center bg-transparent group-hover:bg-black group-hover:text-white group-hover:fill-white transition-colors duration-300 ease-linear"
+							>
+								детальніше
+								<svg class="size-16">
+									<use href="#btn-arrow-icon"></use>
+								</svg>
+							</button>
+						</div>
+						<div
+							class="border border-solid border-black sm:p-24 px-16 pt-16 pb-24 rounded-24 bg-white lg:hover:bg-yellow lg:hover:border-yellow transition-colors duration-300 ease-linear group"
+						>
+							<div
+								class="border border-solid border-black px-8 py-4 rounded-16 flex gap-6 uppercase items-center w-max bg-white mb-16 text-s font-bold"
+							>
+								<div class="size-12 rounded bg-[#FFC700]"></div>
+								Управління
+							</div>
+							<div class="h4">Петров Іван, example@gmail.com</div>
+							<span class="font-medium block mb-8">м.Чернігів</span>
+							<p class="font-medium sm:line-clamp-2 line-clamp-4 mb-16">
+								Тренінги (в тому числі онлайн), розповсюдження інформації, тощо
+								з доцільності сортування сміття серед населення, в Тренінги (в
+								тому числі онлайн), розповсюдження інформації, тощо з
+								доцільності сортування сміття серед населення, в серед
+								населення, в Тренінги (в тому числі онлайн), розповсюдження
+								інформації, тощо з доцільності сортування сміття серед
+								населення, в
+							</p>
+							<button
+								href="#"
+								class="sm:w-[2.4rem] w-full h-[.48rem] border-[2px] border-solid border-black rounded-30 gap-8 p-16 uppercase flex-center bg-transparent group-hover:bg-black group-hover:text-white group-hover:fill-white transition-colors duration-300 ease-linear"
+							>
+								детальніше
+								<svg class="size-16">
+									<use href="#btn-arrow-icon"></use>
+								</svg>
+							</button>
+						</div>
+						<div
+							class="border border-solid border-black sm:p-24 px-16 pt-16 pb-24 rounded-24 bg-white lg:hover:bg-yellow lg:hover:border-yellow transition-colors duration-300 ease-linear group"
+						>
+							<div
+								class="border border-solid border-black px-8 py-4 rounded-16 flex gap-6 uppercase items-center w-max bg-white mb-16 text-s font-bold"
+							>
+								<div class="size-12 rounded bg-[#FFC700]"></div>
+								Управління
+							</div>
+							<div class="h4">Петров Іван, example@gmail.com</div>
+							<span class="font-medium block mb-8">м.Чернігів</span>
+							<p class="font-medium sm:line-clamp-2 line-clamp-4 mb-16">
+								Тренінги (в тому числі онлайн), розповсюдження інформації, тощо
+								з доцільності сортування сміття серед населення, в Тренінги (в
+								тому числі онлайн), розповсюдження інформації, тощо з
+								доцільності сортування сміття серед населення, в серед
+								населення, в Тренінги (в тому числі онлайн), розповсюдження
+								інформації, тощо з доцільності сортування сміття серед
+								населення, в
+							</p>
+							<button
+								href="#"
+								class="sm:w-[2.4rem] w-full h-[.48rem] border-[2px] border-solid border-black rounded-30 gap-8 p-16 uppercase flex-center bg-transparent group-hover:bg-black group-hover:text-white group-hover:fill-white transition-colors duration-300 ease-linear"
+							>
+								детальніше
+								<svg class="size-16">
+									<use href="#btn-arrow-icon"></use>
+								</svg>
+							</button>
+						</div>
+						<div
+							class="border border-solid border-black sm:p-24 px-16 pt-16 pb-24 rounded-24 bg-white lg:hover:bg-yellow lg:hover:border-yellow transition-colors duration-300 ease-linear group"
+						>
+							<div
+								class="border border-solid border-black px-8 py-4 rounded-16 flex gap-6 uppercase items-center w-max bg-white mb-16 text-s font-bold"
+							>
+								<div class="size-12 rounded bg-[#FFC700]"></div>
+								Управління
+							</div>
+							<div class="h4">Петров Іван, example@gmail.com</div>
+							<span class="font-medium block mb-8">м.Чернігів</span>
+							<p class="font-medium sm:line-clamp-2 line-clamp-4 mb-16">
+								Тренінги (в тому числі онлайн), розповсюдження інформації, тощо
+								з доцільності сортування сміття серед населення, в Тренінги (в
+								тому числі онлайн), розповсюдження інформації, тощо з
+								доцільності сортування сміття серед населення, в серед
+								населення, в Тренінги (в тому числі онлайн), розповсюдження
+								інформації, тощо з доцільності сортування сміття серед
+								населення, в
+							</p>
+							<button
+								href="#"
+								class="sm:w-[2.4rem] w-full h-[.48rem] border-[2px] border-solid border-black rounded-30 gap-8 p-16 uppercase flex-center bg-transparent group-hover:bg-black group-hover:text-white group-hover:fill-white transition-colors duration-300 ease-linear"
+							>
+								детальніше
+								<svg class="size-16">
+									<use href="#btn-arrow-icon"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<button
+						class="lg:w-full h-[.48rem] mb-8 last:mb-24 bg-black rounded-30 text-white text-s flex-center px-24 py-8 uppercase lg:hover:bg-yellow lg:hover:text-black transition duration-300 ease-linear max-w-max mx-auto font-semibold"
+					>
+						показати ще
+					</button>
+					<button
+						class="rounded border border-solid border-black size-32 absolute top-24 right-24 before:w-24 before:h-2 before:bg-black before:absolute before:top-1/2 before:right-1/2 before:translate-x-1/2 before:-translate-y-1/2 before:rotate-45 after:w-24 after:h-2 after:bg-black after:absolute after:top-1/2 after:right-1/2 after:translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 lg:hover:bg-black bg-bg transition-colors duration-300 lg:hover:before:bg-white lg:hover:after:bg-white before:transition-colors before:duration-300 after:transition-colors after:duration-300"
+					></button>
+				</div>
+			</div> -->
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_modal.htm',{}) @@include('html/_svg.htm',{})
