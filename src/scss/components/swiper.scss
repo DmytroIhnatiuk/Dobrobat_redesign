@@ -1,5 +1,25 @@
-[data-swiper="ourТeamSlider"] {
-  .swiper-slide {
-    height: auto;
-  }
+[data-swiper='ourТeamSlider'] {
+	.swiper-slide {
+		height: auto;
+	}
+}
+[data-swiper='suggestionsSliderNav'] {
+	.swiper-slide-thumb-active {
+		div {
+			background: var(--black);
+			color: var(--white);
+		}
+	}
+}
+[data-swiper='suggestionsSlider'] {
+	.swiper-slide {
+		opacity: 0;
+		visibility: hidden;
+		height: 0 !important;
+	}
+	.swiper-slide-active {
+		opacity: 1;
+		visibility: visible;
+		height: auto !important;
+	}
 }

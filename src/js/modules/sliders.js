@@ -163,8 +163,13 @@ function suggestionsSliderNav() {
 	sliderThumbs = new Swiper(el, {
 		modules: [Thumbs],
 		slidesPerView: 2,
-		spaceBetween: 16,
+		spaceBetween: 8,
 		watchSlidesProgress: true,
+		breakpoints: {
+			640: {
+				spaceBetween: 16,
+			},
+		},
 	})
 }
 
@@ -175,6 +180,7 @@ function suggestionsSlider() {
 	new Swiper(el, {
 		modules: [Thumbs, EffectFade],
 		slidesPerView: 1,
+		speed: 800,
 		autoHeight: true,
 		effect: 'fade',
 		fadeEffect: {
